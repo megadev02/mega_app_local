@@ -29,24 +29,35 @@
         private void InitializeComponent()
         {
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.tbCodReIE = new DevExpress.XtraEditors.TextEdit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbCodReIE.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
             // 
             this.labelControl1.Location = new System.Drawing.Point(25, 42);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(63, 13);
+            this.labelControl1.Size = new System.Drawing.Size(49, 13);
             this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "labelControl1";
+            this.labelControl1.Text = "Cod ReIE:";
+            // 
+            // tbCodReIE
+            // 
+            this.tbCodReIE.Location = new System.Drawing.Point(84, 39);
+            this.tbCodReIE.Name = "tbCodReIE";
+            this.tbCodReIE.Size = new System.Drawing.Size(100, 20);
+            this.tbCodReIE.TabIndex = 1;
             // 
             // ReciboIngresoEgresoView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(416, 297);
+            this.Controls.Add(this.tbCodReIE);
             this.Controls.Add(this.labelControl1);
             this.Name = "ReciboIngresoEgresoView";
             this.Text = "ReciboIngresoEgresoView";
+            ((System.ComponentModel.ISupportInitialize)(this.tbCodReIE.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -55,5 +66,6 @@
         #endregion
 
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.TextEdit tbCodReIE;
     }
 }
