@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{345D7E45-B89C-40FB-B371-ED1F46B088F1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mega.App</RootNamespace>
+    <AssemblyName>Mega.App</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v6.2, Version=6.2.4.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v6.2, Version=6.2.4.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v6.2, Version=6.2.4.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v6.2, Version=6.2.4.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Developer Express .NET 2005 v6.2\Sources\DevExpress.DLL\DevExpress.XtraEditors.v6.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v6.2, Version=6.2.4.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v6.2, Version=6.2.4.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v6.2, Version=6.2.4.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL" />
+    <Reference Include="EngineIoClientDotNet, Version=0.9.17.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\EngineIoClientDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport, Version=1.8.41.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PopupControl">
+      <HintPath>..\..\..\mega_base\Bijcorp.Base\bin\Debug\PopupControl.dll</HintPath>
+    </Reference>
+    <Reference Include="SocketIoClientDotNet, Version=0.9.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\SocketIoClientDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebSocket4Net, Version=0.12.0.0, Culture=neutral, PublicKeyToken=eb4e154b696bf72a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\WebSocket4Net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\cbCodigoCuenta.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cbCodigoCuenta.Designer.cs">
+      <DependentUpon>cbCodigoCuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cbComprobante.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cbComprobante.Designer.cs">
+      <DependentUpon>cbComprobante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cbEntidadFinanciera.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cbEntidadFinanciera.Designer.cs">
+      <DependentUpon>cbEntidadFinanciera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cbMoneda.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cbMoneda.Designer.cs">
+      <DependentUpon>cbMoneda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cbOficina.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cbOficina.designer.cs">
+      <DependentUpon>cbOficina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cbPersona.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\cbPersona.Designer.cs">
+      <DependentUpon>cbPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cbTipoDocumentoId.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cbTipoDocumentoId.Designer.cs">
+      <DependentUpon>cbTipoDocumentoId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cbTipoComunero.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cbTipoComunero.Designer.cs">
+      <DependentUpon>cbTipoComunero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CodDocumento.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\CodDocumento.Designer.cs">
+      <DependentUpon>CodDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CUtil.cs" />
+    <Compile Include="Messages.cs" />
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presenters\BancoPresenter.cs" />
+    <Compile Include="Presenters\ComprobantePresenter.cs" />
+    <Compile Include="Presenters\ConceptoPresenter.cs" />
+    <Compile Include="Presenters\DenominacionMonedaPresenter.cs" />
+    <Compile Include="Presenters\EntidadFinancieraPresenter.cs" />
+    <Compile Include="Presenters\MonedaPresenter.cs" />
+    <Compile Include="Presenters\OficinaPresenter.cs" />
+    <Compile Include="Presenters\PersonaPresenter.cs" />
+    <Compile Include="Presenters\SeriePresenter.cs" />
+    <Compile Include="Presenters\TipoDocumentoIdentidadPresenter.cs" />
+    <Compile Include="Presenters\TransferenciaPresenter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search\FormSearchBanco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\FormSearchBanco.Designer.cs">
+      <DependentUpon>FormSearchBanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\FormSearchComprobante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\FormSearchComprobante.Designer.cs">
+      <DependentUpon>FormSearchComprobante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\FormSearchConcepto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\FormSearchConcepto.Designer.cs">
+      <DependentUpon>FormSearchConcepto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\FormSearchDenominacionMoneda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\FormSearchDenominacionMoneda.Designer.cs">
+      <DependentUpon>FormSearchDenominacionMoneda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\FormSearchEntidadFinanciera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\FormSearchEntidadFinanciera.Designer.cs">
+      <DependentUpon>FormSearchEntidadFinanciera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\FormSearchMoneda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\FormSearchMoneda.Designer.cs">
+      <DependentUpon>FormSearchMoneda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\FormSearchOficina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\FormSearchOficina.Designer.cs">
+      <DependentUpon>FormSearchOficina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\FormSearchPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\FormSearchPersona.Designer.cs">
+      <DependentUpon>FormSearchPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\FormSearchSerie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\FormSearchSerie.Designer.cs">
+      <DependentUpon>FormSearchSerie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\FormSearchTipoDocumentoIdentidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\FormSearchTipoDocumentoIdentidad.Designer.cs">
+      <DependentUpon>FormSearchTipoDocumentoIdentidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\FormSearchTransferencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\FormSearchTransferencias.Designer.cs">
+      <DependentUpon>FormSearchTransferencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SocketConexion.cs" />
+    <Compile Include="Views\BancoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\BancoView.Designer.cs">
+      <DependentUpon>BancoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ComprobanteView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ComprobanteView.Designer.cs">
+      <DependentUpon>ComprobanteView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConceptoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ConceptoView.Designer.cs">
+      <DependentUpon>ConceptoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DenominacionMonedaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DenominacionMonedaView.Designer.cs">
+      <DependentUpon>DenominacionMonedaView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EntidadFinancieraView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EntidadFinancieraView.Designer.cs">
+      <DependentUpon>EntidadFinancieraView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Interface\IBancoView.cs" />
+    <Compile Include="Views\Interface\IComprobanteView.cs" />
+    <Compile Include="Views\Interface\IDenominacionMonedaView.cs" />
+    <Compile Include="Views\Interface\IEntidadFinancieraView.cs" />
+    <Compile Include="Views\Interface\ISerieView.cs" />
+    <Compile Include="Views\Interface\ITransferenciaView.cs" />
+    <Compile Include="Views\PersonaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PersonaView.Designer.cs">
+      <DependentUpon>PersonaView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Interface\IConceptoView.cs" />
+    <Compile Include="Views\Interface\IMonedaView.cs" />
+    <Compile Include="Views\Interface\IOficinaView.cs" />
+    <Compile Include="Views\Interface\IPersonaView.cs" />
+    <Compile Include="Views\Interface\ITipoDocumentoIdentidadView.cs" />
+    <Compile Include="Views\MonedaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MonedaView.Designer.cs">
+      <DependentUpon>MonedaView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OficinaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\OficinaView.Designer.cs">
+      <DependentUpon>OficinaView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReciboIngresoEgresoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ReciboIngresoEgresoView.Designer.cs">
+      <DependentUpon>ReciboIngresoEgresoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SerieView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SerieView.Designer.cs">
+      <DependentUpon>SerieView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TipoDocumentoIdentidadView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TipoDocumentoIdentidadView.Designer.cs">
+      <DependentUpon>TipoDocumentoIdentidadView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TransferenciaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TransferenciaView.Designer.cs">
+      <DependentUpon>TransferenciaView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controls\cbPersona.resx">
+      <DependentUpon>cbPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Search\FormSearchConcepto.resx">
+      <DependentUpon>FormSearchConcepto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\FormSearchDenominacionMoneda.resx">
+      <DependentUpon>FormSearchDenominacionMoneda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\FormSearchMoneda.resx">
+      <DependentUpon>FormSearchMoneda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\FormSearchOficina.resx">
+      <DependentUpon>FormSearchOficina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\FormSearchTipoDocumentoIdentidad.resx">
+      <DependentUpon>FormSearchTipoDocumentoIdentidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\FormSearchTransferencias.resx">
+      <DependentUpon>FormSearchTransferencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BancoView.resx">
+      <DependentUpon>BancoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ComprobanteView.resx">
+      <DependentUpon>ComprobanteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ConceptoView.resx">
+      <DependentUpon>ConceptoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DenominacionMonedaView.resx">
+      <DependentUpon>DenominacionMonedaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EntidadFinancieraView.resx">
+      <DependentUpon>EntidadFinancieraView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PersonaView.resx">
+      <DependentUpon>PersonaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MonedaView.resx">
+      <DependentUpon>MonedaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OficinaView.resx">
+      <DependentUpon>OficinaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReciboIngresoEgresoView.resx">
+      <DependentUpon>ReciboIngresoEgresoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SerieView.resx">
+      <DependentUpon>SerieView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TipoDocumentoIdentidadView.resx">
+      <DependentUpon>TipoDocumentoIdentidadView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TransferenciaView.resx">
+      <DependentUpon>TransferenciaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Desert.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\mega_base\Bijcorp.Base\Bijcorp.Base.csproj">
+      <Project>{c883e0c1-4e8a-4cf1-919b-e5fd6dd4ac7d}</Project>
+      <Name>Bijcorp.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mega.Bdo\Mega.Bdo.csproj">
+      <Project>{c6fd9f84-a18e-472d-ba4b-7ed274f5b276}</Project>
+      <Name>Mega.Bdo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mega.Comun\Mega.Comun.csproj">
+      <Project>{5ce827ec-75c9-40d5-8167-9648bdf9cc02}</Project>
+      <Name>Mega.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mega.Logic\Mega.Logic.csproj">
+      <Project>{c412d286-cc6c-4a7d-a92f-780d0cb605c5}</Project>
+      <Name>Mega.Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20141231_172636.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Lib\EngineIoClientDotNet.dll" />
+    <Content Include="Lib\Newtonsoft.Json.dll" />
+    <Content Include="Lib\SocketIoClientDotNet.dll" />
+    <Content Include="Lib\WebSocket4Net.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

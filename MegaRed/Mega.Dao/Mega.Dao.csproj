@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{152F1B5A-2941-424A-8E65-88A5EFA0ACE0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mega.Dao</RootNamespace>
+    <AssemblyName>Mega.Dao</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PlanContableDao.cs" />
+    <Compile Include="CajaDao.cs" />
+    <Compile Include="UsuarioDao.cs" />
+    <Compile Include="CajaAperturaDao.cs" />
+    <Compile Include="DenominacionMonedaDao.cs" />
+    <Compile Include="ConceptoDao.cs" />
+    <Compile Include="TipoCambioDao.cs" />
+    <Compile Include="BancoDao.cs" />
+    <Compile Include="DepositoPrestamoDao.cs" />
+    <Compile Include="CambioMonedaDao.cs" />
+    <Compile Include="SerieDao.cs" />
+    <Compile Include="PersonaDetalleDao.cs" />
+    <Compile Include="AccesosDao.cs" />
+    <Compile Include="PerfilDao.cs" />
+    <Compile Include="ArqueoCajaDao.cs" />
+    <Compile Include="ComprobanteDao.cs" />
+    <Compile Include="TipoComuneroDao.cs" />
+    <Compile Include="DocumentoDao.cs" />
+    <Compile Include="EmpresaAfiliadaDao.cs" />
+    <Compile Include="OficinaDao.cs" />
+    <Compile Include="ContratoEmpresaAfiliadoDao.cs" />
+    <Compile Include="AsientoDao.cs" />
+    <Compile Include="AsientoDetalleDao.cs" />
+    <Compile Include="EntidadFinancieraDao.cs" />
+    <Compile Include="CuentaBancariaDao.cs" />
+    <Compile Include="TransferenciaDao.cs" />
+    <Compile Include="MovimientoFondosDao.cs" />
+    <Compile Include="ComprobanteCompraDao.cs" />
+    <Compile Include="ReciboCajaDao.cs" />
+    <Compile Include="MonedaDao.cs" />
+    <Compile Include="TipoDocumentoIdentidadDao.cs" />
+    <Compile Include="PersonaDao.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mega.Bdo\Mega.Bdo.csproj">
+      <Project>{c6fd9f84-a18e-472d-ba4b-7ed274f5b276}</Project>
+      <Name>Mega.Bdo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mega.Data\Mega.Data.csproj">
+      <Project>{3e8d6e5f-0883-499e-a7e6-912d7cf8965c}</Project>
+      <Name>Mega.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

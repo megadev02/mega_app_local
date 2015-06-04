@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mega.App", "Mega.App\Mega.App.csproj", "{345D7E45-B89C-40FB-B371-ED1F46B088F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mega.Bdo", "Mega.Bdo\Mega.Bdo.csproj", "{C6FD9F84-A18E-472D-BA4B-7ED274F5B276}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mega.Dao", "Mega.Dao\Mega.Dao.csproj", "{152F1B5A-2941-424A-8E65-88A5EFA0ACE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mega.Logic", "Mega.Logic\Mega.Logic.csproj", "{C412D286-CC6C-4A7D-A92F-780D0CB605C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mega.Comun", "Mega.Comun\Mega.Comun.csproj", "{5CE827EC-75C9-40D5-8167-9648BDF9CC02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bijcorp.Base", "..\..\mega_base\Bijcorp.Base\Bijcorp.Base.csproj", "{C883E0C1-4E8A-4CF1-919B-E5FD6DD4AC7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mega.Data", "Mega.Data\Mega.Data.csproj", "{3E8D6E5F-0883-499E-A7E6-912D7CF8965C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{345D7E45-B89C-40FB-B371-ED1F46B088F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{345D7E45-B89C-40FB-B371-ED1F46B088F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{345D7E45-B89C-40FB-B371-ED1F46B088F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{345D7E45-B89C-40FB-B371-ED1F46B088F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6FD9F84-A18E-472D-BA4B-7ED274F5B276}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6FD9F84-A18E-472D-BA4B-7ED274F5B276}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6FD9F84-A18E-472D-BA4B-7ED274F5B276}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6FD9F84-A18E-472D-BA4B-7ED274F5B276}.Release|Any CPU.Build.0 = Release|Any CPU
+		{152F1B5A-2941-424A-8E65-88A5EFA0ACE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{152F1B5A-2941-424A-8E65-88A5EFA0ACE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{152F1B5A-2941-424A-8E65-88A5EFA0ACE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{152F1B5A-2941-424A-8E65-88A5EFA0ACE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C412D286-CC6C-4A7D-A92F-780D0CB605C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C412D286-CC6C-4A7D-A92F-780D0CB605C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C412D286-CC6C-4A7D-A92F-780D0CB605C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C412D286-CC6C-4A7D-A92F-780D0CB605C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CE827EC-75C9-40D5-8167-9648BDF9CC02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CE827EC-75C9-40D5-8167-9648BDF9CC02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CE827EC-75C9-40D5-8167-9648BDF9CC02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CE827EC-75C9-40D5-8167-9648BDF9CC02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C883E0C1-4E8A-4CF1-919B-E5FD6DD4AC7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C883E0C1-4E8A-4CF1-919B-E5FD6DD4AC7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C883E0C1-4E8A-4CF1-919B-E5FD6DD4AC7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C883E0C1-4E8A-4CF1-919B-E5FD6DD4AC7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E8D6E5F-0883-499E-A7E6-912D7CF8965C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E8D6E5F-0883-499E-A7E6-912D7CF8965C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E8D6E5F-0883-499E-A7E6-912D7CF8965C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E8D6E5F-0883-499E-A7E6-912D7CF8965C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C6FD9F84-A18E-472D-BA4B-7ED274F5B276}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mega.Bdo</RootNamespace>
+    <AssemblyName>Mega.Bdo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BdoObjectBase.cs" />
+    <Compile Include="ComuneroBdo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoComuneroBdo.cs" />
+    <Compile Include="Validation\BrokenRule.cs" />
+    <Compile Include="Validation\BrokenRulesList.cs" />
+    <Compile Include="Validation\ValidateRuleBase.cs" />
+    <Compile Include="Validation\ValidateRuleNotNull.cs" />
+    <Compile Include="Validation\ValidateRuleRegexMatching.cs" />
+    <Compile Include="Validation\ValidateRuleStringMaxLength.cs" />
+    <Compile Include="Validation\ValidateRuleStringRequired.cs" />
+    <Compile Include="Validation\ValidationRules.cs" />
+    <Compile Include="MovimientoFondosBdo.cs" />
+    <Compile Include="PersonaBdo.cs" />
+    <Compile Include="PlanContableBdo.cs" />
+    <Compile Include="CajaBdo.cs" />
+    <Compile Include="ComprobanteCompraBdo.cs" />
+    <Compile Include="UsuarioBdo.cs" />
+    <Compile Include="ReciboCajaBdo.cs" />
+    <Compile Include="CajaAperturaBdo.cs" />
+    <Compile Include="ConceptoBdo.cs" />
+    <Compile Include="TransferenciaBdo.cs" />
+    <Compile Include="MonedaBdo.cs" />
+    <Compile Include="TipoCambioBdo.cs" />
+    <Compile Include="DepositoPrestamoBdo.cs" />
+    <Compile Include="SerieBdo.cs" />
+    <Compile Include="CambioMonedaBdo.cs" />
+    <Compile Include="PersonaDetalleBdo.cs" />
+    <Compile Include="AccesosBdo.cs" />
+    <Compile Include="PerfilBdo.cs" />
+    <Compile Include="DenominacionMonedaBdo.cs" />
+    <Compile Include="ArqueoCajaBdo.cs" />
+    <Compile Include="ComprobanteBdo.cs" />
+    <Compile Include="DocumentoBdo.cs" />
+    <Compile Include="EmpresaAfiliadaBdo.cs" />
+    <Compile Include="OficinaBdo.cs" />
+    <Compile Include="ContratoEmpresaAfiliadoBdo.cs" />
+    <Compile Include="AsientoBdo.cs" />
+    <Compile Include="AsientoDetalleBdo.cs" />
+    <Compile Include="EntidadFinancieraBdo.cs" />
+    <Compile Include="CuentaBancariaBdo.cs" />
+    <Compile Include="BancoBdo.cs" />
+    <Compile Include="TipoDocumentoIdentidadBdo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
