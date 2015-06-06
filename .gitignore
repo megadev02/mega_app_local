@@ -206,3 +206,6 @@ FakesAssemblies/
 
 # dev express 6.2
 *.licx
+
+# ignore my tmp folder
+tmp/
