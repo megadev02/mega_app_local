@@ -43,9 +43,9 @@ namespace Mega.Dao
 			{                
                 using (var context = new MegaEntities())
                 {
-                    var objectId = objectBdo.NumeroDocumento;
+                    var objectId = objectBdo.MovimientoFondosId;
                     MovimientoFondos objectInDb = (from p in context.MovimientoFondos
-                                           where p.NumeroDocumento == objectId
+                                           where p.MovimientoFondosId == objectId
                                            select p).FirstOrDefault();
 
                     //check product
@@ -53,9 +53,9 @@ namespace Mega.Dao
                     {
                         context.MovimientoFondos.Add(new MovimientoFondos()
                         {                        
+							MovimientoFondosId = objectBdo.MovimientoFondosId,
 							NumeroDocumento = objectBdo.NumeroDocumento,
 							CodDocumento = objectBdo.CodDocumento,
-							MonedaId = objectBdo.MonedaId,
 							Importe = objectBdo.Importe,
 							OficinaIdProcedencia = objectBdo.OficinaIdProcedencia,
 							OficinaIdDestino = objectBdo.OficinaIdDestino,
@@ -69,10 +69,14 @@ namespace Mega.Dao
 							Estado = objectBdo.Estado,
 							UsuarioAnulacion = objectBdo.UsuarioAnulacion,
 							ConceptoId = objectBdo.ConceptoId,
+							MonedaId = objectBdo.MonedaId,
 							TipoMovimiento = objectBdo.TipoMovimiento,
 							FechaHoraTransaccion = objectBdo.FechaHoraTransaccion,
+							CodDocumentoDescargo = objectBdo.CodDocumentoDescargo,
+							NroDocumentoDescargo = objectBdo.NroDocumentoDescargo,
 							FechaHoraDescargo = objectBdo.FechaHoraDescargo,
-							FlagImpreso = objectBdo.FlagImpreso
+							FlagImpreso = objectBdo.FlagImpreso,
+							Observacion = objectBdo.Observacion
 
                         });
                     
@@ -109,17 +113,17 @@ namespace Mega.Dao
             {                
                 using (var context = new MegaEntities())
                 {
-                    var objectId = objectBdo.NumeroDocumento;
+                    var objectId = objectBdo.MovimientoFondosId;
                     MovimientoFondos objectInDb = (from p in context.MovimientoFondos
-                                           where p.NumeroDocumento == objectId
+                                           where p.MovimientoFondosId == objectId
                                            select p).FirstOrDefault();
 
                     //check product
                     if (objectInDb != null)
                     {
+						objectInDb.MovimientoFondosId = objectBdo.MovimientoFondosId;
 						objectInDb.NumeroDocumento = objectBdo.NumeroDocumento;
 						objectInDb.CodDocumento = objectBdo.CodDocumento;
-						objectInDb.MonedaId = objectBdo.MonedaId;
 						objectInDb.Importe = objectBdo.Importe;
 						objectInDb.OficinaIdProcedencia = objectBdo.OficinaIdProcedencia;
 						objectInDb.OficinaIdDestino = objectBdo.OficinaIdDestino;
@@ -133,10 +137,14 @@ namespace Mega.Dao
 						objectInDb.Estado = objectBdo.Estado;
 						objectInDb.UsuarioAnulacion = objectBdo.UsuarioAnulacion;
 						objectInDb.ConceptoId = objectBdo.ConceptoId;
+						objectInDb.MonedaId = objectBdo.MonedaId;
 						objectInDb.TipoMovimiento = objectBdo.TipoMovimiento;
 						objectInDb.FechaHoraTransaccion = objectBdo.FechaHoraTransaccion;
+						objectInDb.CodDocumentoDescargo = objectBdo.CodDocumentoDescargo;
+						objectInDb.NroDocumentoDescargo = objectBdo.NroDocumentoDescargo;
 						objectInDb.FechaHoraDescargo = objectBdo.FechaHoraDescargo;
 						objectInDb.FlagImpreso = objectBdo.FlagImpreso;
+						objectInDb.Observacion = objectBdo.Observacion;
 
                         //elementInDb.RowVersion = elementBdo.RowVersion;                    
                     }
@@ -170,15 +178,15 @@ namespace Mega.Dao
                 using (var context = new MegaEntities())
                 {
                     MovimientoFondos objectInDb = (from p in context.MovimientoFondos
-                                       where p.NumeroDocumento == id
+                                       where p.MovimientoFondosId == id
                                        select p).FirstOrDefault();
 
                     if (objectInDb != null)
                         objectBdo = new MovimientoFondosBdo()
                         {
+							MovimientoFondosId = objectInDb.MovimientoFondosId,
 							NumeroDocumento = objectInDb.NumeroDocumento,
 							CodDocumento = objectInDb.CodDocumento,
-							MonedaId = objectInDb.MonedaId,
 							Importe = objectInDb.Importe,
 							OficinaIdProcedencia = objectInDb.OficinaIdProcedencia,
 							OficinaIdDestino = objectInDb.OficinaIdDestino,
@@ -192,10 +200,14 @@ namespace Mega.Dao
 							Estado = objectInDb.Estado,
 							UsuarioAnulacion = objectInDb.UsuarioAnulacion,
 							ConceptoId = objectInDb.ConceptoId,
+							MonedaId = objectInDb.MonedaId,
 							TipoMovimiento = objectInDb.TipoMovimiento,
 							FechaHoraTransaccion = objectInDb.FechaHoraTransaccion,
+							CodDocumentoDescargo = objectInDb.CodDocumentoDescargo,
+							NroDocumentoDescargo = objectInDb.NroDocumentoDescargo,
 							FechaHoraDescargo = objectInDb.FechaHoraDescargo,
-							FlagImpreso = objectInDb.FlagImpreso
+							FlagImpreso = objectInDb.FlagImpreso,
+							Observacion = objectInDb.Observacion
 
                             
                             //RowVersion = element.RowVersion
@@ -225,9 +237,9 @@ namespace Mega.Dao
                 
                     MovimientoFondosBdos.AddRange(items.Select(item => new MovimientoFondosBdo()
                     {
+						MovimientoFondosId = item.MovimientoFondosId,
 						NumeroDocumento = item.NumeroDocumento,
 						CodDocumento = item.CodDocumento,
-						MonedaId = item.MonedaId,
 						Importe = item.Importe,
 						OficinaIdProcedencia = item.OficinaIdProcedencia,
 						OficinaIdDestino = item.OficinaIdDestino,
@@ -241,10 +253,14 @@ namespace Mega.Dao
 						Estado = item.Estado,
 						UsuarioAnulacion = item.UsuarioAnulacion,
 						ConceptoId = item.ConceptoId,
+						MonedaId = item.MonedaId,
 						TipoMovimiento = item.TipoMovimiento,
 						FechaHoraTransaccion = item.FechaHoraTransaccion,
+						CodDocumentoDescargo = item.CodDocumentoDescargo,
+						NroDocumentoDescargo = item.NroDocumentoDescargo,
 						FechaHoraDescargo = item.FechaHoraDescargo,
-						FlagImpreso = item.FlagImpreso
+						FlagImpreso = item.FlagImpreso,
+						Observacion = item.Observacion
 
                     }));
                 }
@@ -271,9 +287,9 @@ namespace Mega.Dao
 
                     MovimientoFondosBdos.AddRange(items.Select(item => new MovimientoFondosBdo()
                     {
+						MovimientoFondosId = item.MovimientoFondosId,
 						NumeroDocumento = item.NumeroDocumento,
 						CodDocumento = item.CodDocumento,
-						MonedaId = item.MonedaId,
 						Importe = item.Importe,
 						OficinaIdProcedencia = item.OficinaIdProcedencia,
 						OficinaIdDestino = item.OficinaIdDestino,
@@ -287,10 +303,14 @@ namespace Mega.Dao
 						Estado = item.Estado,
 						UsuarioAnulacion = item.UsuarioAnulacion,
 						ConceptoId = item.ConceptoId,
+						MonedaId = item.MonedaId,
 						TipoMovimiento = item.TipoMovimiento,
 						FechaHoraTransaccion = item.FechaHoraTransaccion,
+						CodDocumentoDescargo = item.CodDocumentoDescargo,
+						NroDocumentoDescargo = item.NroDocumentoDescargo,
 						FechaHoraDescargo = item.FechaHoraDescargo,
-						FlagImpreso = item.FlagImpreso
+						FlagImpreso = item.FlagImpreso,
+						Observacion = item.Observacion
 
                     }));
                 }

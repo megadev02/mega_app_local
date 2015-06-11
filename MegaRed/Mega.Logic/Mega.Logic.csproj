@@ -36,8 +36,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ParPersonaLogic.cs" />
     <Compile Include="EntidadFinancieraLogic.cs" />
     <Compile Include="InvalidLogicObjectException.cs" />
+    <Compile Include="Modules\ModMovimientoFondosLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MovimientoFondosLogic.cs" />
     <Compile Include="PersonaLogic.cs" />
@@ -81,9 +83,7 @@
       <Name>Mega.Dao</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Modules\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -18,9 +18,9 @@ namespace Mega.Data
         {
             this.CambioMoneda = new HashSet<CambioMoneda>();
             this.DepositoPrestamo = new HashSet<DepositoPrestamo>();
+            this.Transferencia = new HashSet<Transferencia>();
             this.MovimientoFondos = new HashSet<MovimientoFondos>();
             this.ReciboCaja = new HashSet<ReciboCaja>();
-            this.Transferencia = new HashSet<Transferencia>();
         }
     
         public int ConceptoId { get; set; }
@@ -30,8 +30,8 @@ namespace Mega.Data
         public virtual ICollection<CambioMoneda> CambioMoneda { get; set; }
         public virtual PlanContable PlanContable { get; set; }
         public virtual ICollection<DepositoPrestamo> DepositoPrestamo { get; set; }
+        public virtual ICollection<Transferencia> Transferencia { get; set; }
         public virtual ICollection<MovimientoFondos> MovimientoFondos { get; set; }
         public virtual ICollection<ReciboCaja> ReciboCaja { get; set; }
-        public virtual ICollection<Transferencia> Transferencia { get; set; }
     }
 }

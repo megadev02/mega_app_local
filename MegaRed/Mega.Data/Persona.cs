@@ -19,11 +19,11 @@ namespace Mega.Data
             this.CuentaBancaria = new HashSet<CuentaBancaria>();
             this.DepositoPrestamo = new HashSet<DepositoPrestamo>();
             this.EmpresaAfiliada = new HashSet<EmpresaAfiliada>();
-            this.MovimientoFondos = new HashSet<MovimientoFondos>();
             this.PersonaDetalle = new HashSet<PersonaDetalle>();
-            this.ReciboCaja = new HashSet<ReciboCaja>();
             this.Transferencia = new HashSet<Transferencia>();
             this.Transferencia1 = new HashSet<Transferencia>();
+            this.MovimientoFondos = new HashSet<MovimientoFondos>();
+            this.ReciboCaja = new HashSet<ReciboCaja>();
         }
     
         public string CodigoPersona { get; set; }
@@ -46,11 +46,11 @@ namespace Mega.Data
         public virtual ICollection<CuentaBancaria> CuentaBancaria { get; set; }
         public virtual ICollection<DepositoPrestamo> DepositoPrestamo { get; set; }
         public virtual ICollection<EmpresaAfiliada> EmpresaAfiliada { get; set; }
-        public virtual ICollection<MovimientoFondos> MovimientoFondos { get; set; }
         public virtual TipoDocumentoIdentidad TipoDocumentoIdentidad { get; set; }
         public virtual ICollection<PersonaDetalle> PersonaDetalle { get; set; }
-        public virtual ICollection<ReciboCaja> ReciboCaja { get; set; }
         public virtual ICollection<Transferencia> Transferencia { get; set; }
         public virtual ICollection<Transferencia> Transferencia1 { get; set; }
+        public virtual ICollection<MovimientoFondos> MovimientoFondos { get; set; }
+        public virtual ICollection<ReciboCaja> ReciboCaja { get; set; }
     }
 }

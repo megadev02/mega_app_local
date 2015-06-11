@@ -9,9 +9,9 @@ namespace Mega.Bdo
 		#region InnerClass
 		public enum MovimientoFondosFields
 		{
+			MovimientoFondosId,
 			NumeroDocumento,
 			CodDocumento,
-			MonedaId,
 			Importe,
 			OficinaIdProcedencia,
 			OficinaIdDestino,
@@ -25,18 +25,22 @@ namespace Mega.Bdo
 			Estado,
 			UsuarioAnulacion,
 			ConceptoId,
+			MonedaId,
 			TipoMovimiento,
 			FechaHoraTransaccion,
+			CodDocumentoDescargo,
+			NroDocumentoDescargo,
 			FechaHoraDescargo,
-			FlagImpreso
+			FlagImpreso,
+			Observacion
 		}
 		#endregion
 
 		#region Data Members
 
-			int _numeroDocumento;
+			int _movimientoFondosId;
+			int? _numeroDocumento;
 			string _codDocumento;
-			int? _monedaId;
 			decimal? _importe;
 			string _oficinaIdProcedencia;
 			string _oficinaIdDestino;
@@ -50,16 +54,33 @@ namespace Mega.Bdo
 			int? _estado;
 			string _usuarioAnulacion;
 			int? _conceptoId;
+			int? _monedaId;
 			int? _tipoMovimiento;
 			DateTime? _fechaHoraTransaccion;
+			string _codDocumentoDescargo;
+			int? _nroDocumentoDescargo;
 			DateTime? _fechaHoraDescargo;
 			bool _flagImpreso;
+			string _observacion;
 
 		#endregion
 
 		#region Properties
 
-		public int  NumeroDocumento
+		public int  MovimientoFondosId
+		{
+			 get { return _movimientoFondosId; }
+			 set
+			 {
+				 if (_movimientoFondosId != value)
+				 {
+					_movimientoFondosId = value;
+					 PropertyHasChanged("MovimientoFondosId");
+				 }
+			 }
+		}
+
+		public int?  NumeroDocumento
 		{
 			 get { return _numeroDocumento; }
 			 set
@@ -81,19 +102,6 @@ namespace Mega.Bdo
 				 {
 					_codDocumento = value;
 					 PropertyHasChanged("CodDocumento");
-				 }
-			 }
-		}
-
-		public int?  MonedaId
-		{
-			 get { return _monedaId; }
-			 set
-			 {
-				 if (_monedaId != value)
-				 {
-					_monedaId = value;
-					 PropertyHasChanged("MonedaId");
 				 }
 			 }
 		}
@@ -267,6 +275,19 @@ namespace Mega.Bdo
 			 }
 		}
 
+		public int?  MonedaId
+		{
+			 get { return _monedaId; }
+			 set
+			 {
+				 if (_monedaId != value)
+				 {
+					_monedaId = value;
+					 PropertyHasChanged("MonedaId");
+				 }
+			 }
+		}
+
 		public int?  TipoMovimiento
 		{
 			 get { return _tipoMovimiento; }
@@ -289,6 +310,32 @@ namespace Mega.Bdo
 				 {
 					_fechaHoraTransaccion = value;
 					 PropertyHasChanged("FechaHoraTransaccion");
+				 }
+			 }
+		}
+
+		public string  CodDocumentoDescargo
+		{
+			 get { return _codDocumentoDescargo; }
+			 set
+			 {
+				 if (_codDocumentoDescargo != value)
+				 {
+					_codDocumentoDescargo = value;
+					 PropertyHasChanged("CodDocumentoDescargo");
+				 }
+			 }
+		}
+
+		public int?  NroDocumentoDescargo
+		{
+			 get { return _nroDocumentoDescargo; }
+			 set
+			 {
+				 if (_nroDocumentoDescargo != value)
+				 {
+					_nroDocumentoDescargo = value;
+					 PropertyHasChanged("NroDocumentoDescargo");
 				 }
 			 }
 		}
@@ -319,6 +366,19 @@ namespace Mega.Bdo
 			 }
 		}
 
+		public string  Observacion
+		{
+			 get { return _observacion; }
+			 set
+			 {
+				 if (_observacion != value)
+				 {
+					_observacion = value;
+					 PropertyHasChanged("Observacion");
+				 }
+			 }
+		}
+
 
 		#endregion
 
@@ -326,7 +386,7 @@ namespace Mega.Bdo
 
 		internal override void AddValidationRules()
 		{
-			ValidationRules.AddRules(new Validation.ValidateRuleNotNull("NumeroDocumento", "NumeroDocumento"));
+			ValidationRules.AddRules(new Validation.ValidateRuleNotNull("MovimientoFondosId", "MovimientoFondosId"));
 			ValidationRules.AddRules(new Validation.ValidateRuleStringMaxLength("CodDocumento", "CodDocumento",6));
 			ValidationRules.AddRules(new Validation.ValidateRuleStringMaxLength("OficinaIdProcedencia", "OficinaIdProcedencia",10));
 			ValidationRules.AddRules(new Validation.ValidateRuleStringMaxLength("OficinaIdDestino", "OficinaIdDestino",10));
@@ -334,7 +394,9 @@ namespace Mega.Bdo
 			ValidationRules.AddRules(new Validation.ValidateRuleStringMaxLength("CodigoVoucher", "CodigoVoucher",20));
 			ValidationRules.AddRules(new Validation.ValidateRuleStringMaxLength("NumeroOperacion", "NumeroOperacion",30));
 			ValidationRules.AddRules(new Validation.ValidateRuleStringMaxLength("UsuarioAnulacion", "UsuarioAnulacion",20));
+			ValidationRules.AddRules(new Validation.ValidateRuleStringMaxLength("CodDocumentoDescargo", "CodDocumentoDescargo",6));
 			ValidationRules.AddRules(new Validation.ValidateRuleNotNull("FlagImpreso", "FlagImpreso"));
+			ValidationRules.AddRules(new Validation.ValidateRuleStringMaxLength("Observacion", "Observacion",50));
 		}
 
 		#endregion

@@ -90,7 +90,6 @@ namespace Mega.Dao
 							FechaHoraChequeo = objectBdo.FechaHoraChequeo,
 							UsuarioChequeo = objectBdo.UsuarioChequeo,
 							UsuarioArregloCuenta = objectBdo.UsuarioArregloCuenta
-
                         });
                     
                         //elementInDb.RowVersion = elementBdo.RowVersion;                    

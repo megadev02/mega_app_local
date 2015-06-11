@@ -17,11 +17,12 @@ namespace Mega.Data
         public Oficina()
         {
             this.ContratoEmpresaAfiliado = new HashSet<ContratoEmpresaAfiliado>();
-            this.MovimientoFondos = new HashSet<MovimientoFondos>();
-            this.MovimientoFondos1 = new HashSet<MovimientoFondos>();
             this.Transferencia = new HashSet<Transferencia>();
             this.Transferencia1 = new HashSet<Transferencia>();
             this.Serie = new HashSet<Serie>();
+            this.MovimientoFondos = new HashSet<MovimientoFondos>();
+            this.MovimientoFondos1 = new HashSet<MovimientoFondos>();
+            this.ReciboCaja = new HashSet<ReciboCaja>();
         }
     
         public string CodigoOficina { get; set; }
@@ -33,10 +34,11 @@ namespace Mega.Data
         public bool Estado { get; set; }
     
         public virtual ICollection<ContratoEmpresaAfiliado> ContratoEmpresaAfiliado { get; set; }
-        public virtual ICollection<MovimientoFondos> MovimientoFondos { get; set; }
-        public virtual ICollection<MovimientoFondos> MovimientoFondos1 { get; set; }
         public virtual ICollection<Transferencia> Transferencia { get; set; }
         public virtual ICollection<Transferencia> Transferencia1 { get; set; }
         public virtual ICollection<Serie> Serie { get; set; }
+        public virtual ICollection<MovimientoFondos> MovimientoFondos { get; set; }
+        public virtual ICollection<MovimientoFondos> MovimientoFondos1 { get; set; }
+        public virtual ICollection<ReciboCaja> ReciboCaja { get; set; }
     }
 }

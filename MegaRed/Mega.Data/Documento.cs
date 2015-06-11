@@ -17,9 +17,9 @@ namespace Mega.Data
         public Documento()
         {
             this.Asiento = new HashSet<Asiento>();
+            this.Transferencia = new HashSet<Transferencia>();
             this.MovimientoFondos = new HashSet<MovimientoFondos>();
             this.ReciboCaja = new HashSet<ReciboCaja>();
-            this.Transferencia = new HashSet<Transferencia>();
         }
     
         public string CodDocumento { get; set; }
@@ -32,8 +32,8 @@ namespace Mega.Data
     
         public virtual ICollection<Asiento> Asiento { get; set; }
         public virtual Comprobante Comprobante { get; set; }
+        public virtual ICollection<Transferencia> Transferencia { get; set; }
         public virtual ICollection<MovimientoFondos> MovimientoFondos { get; set; }
         public virtual ICollection<ReciboCaja> ReciboCaja { get; set; }
-        public virtual ICollection<Transferencia> Transferencia { get; set; }
     }
 }

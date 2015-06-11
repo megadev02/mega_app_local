@@ -9,6 +9,7 @@ namespace Mega.Bdo
 		#region InnerClass
 		public enum ReciboCajaFields
 		{
+			ReciboCajaId,
 			NumeroDocumento,
 			CajaAperturaId,
 			CodDocumento,
@@ -24,13 +25,16 @@ namespace Mega.Bdo
 			UsuarioAnulacion,
 			ComprobanteCompraId,
 			Estado,
-			ConceptoId
+			ConceptoId,
+			CodigoOficinaProcedencia,
+			MovimientoFondosId
 		}
 		#endregion
 
 		#region Data Members
 
-			int _numeroDocumento;
+			int _reciboCajaId;
+			int? _numeroDocumento;
 			int? _cajaAperturaId;
 			string _codDocumento;
 			int? _tipoRecibo;
@@ -46,12 +50,27 @@ namespace Mega.Bdo
 			int? _comprobanteCompraId;
 			int? _estado;
 			int? _conceptoId;
+			string _codigoOficinaProcedencia;
+			int? _movimientoFondosId;
 
 		#endregion
 
 		#region Properties
 
-		public int  NumeroDocumento
+		public int  ReciboCajaId
+		{
+			 get { return _reciboCajaId; }
+			 set
+			 {
+				 if (_reciboCajaId != value)
+				 {
+					_reciboCajaId = value;
+					 PropertyHasChanged("ReciboCajaId");
+				 }
+			 }
+		}
+
+		public int?  NumeroDocumento
 		{
 			 get { return _numeroDocumento; }
 			 set
@@ -259,6 +278,32 @@ namespace Mega.Bdo
 			 }
 		}
 
+		public string  CodigoOficinaProcedencia
+		{
+			 get { return _codigoOficinaProcedencia; }
+			 set
+			 {
+				 if (_codigoOficinaProcedencia != value)
+				 {
+					_codigoOficinaProcedencia = value;
+					 PropertyHasChanged("CodigoOficinaProcedencia");
+				 }
+			 }
+		}
+
+		public int?  MovimientoFondosId
+		{
+			 get { return _movimientoFondosId; }
+			 set
+			 {
+				 if (_movimientoFondosId != value)
+				 {
+					_movimientoFondosId = value;
+					 PropertyHasChanged("MovimientoFondosId");
+				 }
+			 }
+		}
+
 
 		#endregion
 
@@ -266,12 +311,13 @@ namespace Mega.Bdo
 
 		internal override void AddValidationRules()
 		{
-			ValidationRules.AddRules(new Validation.ValidateRuleNotNull("NumeroDocumento", "NumeroDocumento"));
+			ValidationRules.AddRules(new Validation.ValidateRuleNotNull("ReciboCajaId", "ReciboCajaId"));
 			ValidationRules.AddRules(new Validation.ValidateRuleStringMaxLength("CodDocumento", "CodDocumento",6));
 			ValidationRules.AddRules(new Validation.ValidateRuleStringMaxLength("CodigoPersona", "CodigoPersona",12));
 			ValidationRules.AddRules(new Validation.ValidateRuleStringMaxLength("Concepto", "Concepto",100));
 			ValidationRules.AddRules(new Validation.ValidateRuleStringMaxLength("ObsRecibo", "ObsRecibo",60));
 			ValidationRules.AddRules(new Validation.ValidateRuleStringMaxLength("UsuarioAnulacion", "UsuarioAnulacion",20));
+			ValidationRules.AddRules(new Validation.ValidateRuleStringMaxLength("CodigoOficinaProcedencia", "CodigoOficinaProcedencia",10));
 		}
 
 		#endregion

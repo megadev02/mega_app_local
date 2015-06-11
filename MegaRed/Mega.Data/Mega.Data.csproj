@@ -144,6 +144,9 @@
     <Compile Include="Serie.cs">
       <DependentUpon>Mega.tt</DependentUpon>
     </Compile>
+    <Compile Include="spSearchMovFondos_Result.cs">
+      <DependentUpon>Mega.tt</DependentUpon>
+    </Compile>
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>Mega.tt</DependentUpon>
     </Compile>

@@ -16,8 +16,8 @@ namespace Mega.Data
     {
         public Banco()
         {
-            this.MovimientoFondos = new HashSet<MovimientoFondos>();
             this.Transferencia = new HashSet<Transferencia>();
+            this.MovimientoFondos = new HashSet<MovimientoFondos>();
         }
     
         public int BancoId { get; set; }
@@ -30,7 +30,7 @@ namespace Mega.Data
         public Nullable<bool> Estado { get; set; }
     
         public virtual EntidadFinanciera EntidadFinanciera { get; set; }
-        public virtual ICollection<MovimientoFondos> MovimientoFondos { get; set; }
         public virtual ICollection<Transferencia> Transferencia { get; set; }
+        public virtual ICollection<MovimientoFondos> MovimientoFondos { get; set; }
     }
 }

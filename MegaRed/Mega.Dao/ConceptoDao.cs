@@ -56,7 +56,6 @@ namespace Mega.Dao
 							ConceptoId = objectBdo.ConceptoId,
 							Nombre = objectBdo.Nombre,
 							CodigoCuenta = objectBdo.CodigoCuenta
-
                         });
                     
                         //elementInDb.RowVersion = elementBdo.RowVersion;                    

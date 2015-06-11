@@ -97,6 +97,8 @@ namespace Mega.App
             Modules.DicModules.Add(9, new Action(() => OpenMdi(new ComprobanteView())));
             Modules.DicModules.Add(10, new Action(() => OpenMdi(new SerieView())));
             Modules.DicModules.Add(11, new Action(() => OpenMdi(new TransferenciaView())));
+            Modules.DicModules.Add(12, new Action(() => OpenMdi(new MovimientoFondosView(MovimientoFondosView.TypeViewFondos.Ingreso))));
+            Modules.DicModules.Add(13, new Action(() => OpenMdi(new MovimientoFondosView(MovimientoFondosView.TypeViewFondos.Egreso))));
         }
 
         public override void InitializeTreeMenu()
@@ -123,7 +125,9 @@ namespace Mega.App
                 new LinkModule() {Id = 10, ParentId = 1, Name = "Comprobante", View = Modules.DicModules[9], Group = linkMantenimiento },
                 new LinkModule() {Id = 11, ParentId = 1, Name = "Serie", View = Modules.DicModules[10], Group = linkMantenimiento },
                 new LinkModule() {Id = 12, ParentId = 0, Name = "Procesos para Transferencias", Group = linkProceso },
-                new LinkModule() {Id = 13, ParentId = 12, Name = "Transferencia", View = Modules.DicModules[11], Group = linkProceso}
+                new LinkModule() {Id = 13, ParentId = 12, Name = "Transferencia", View = Modules.DicModules[11], Group = linkProceso},
+                new LinkModule() {Id = 14, ParentId = 12, Name = "Ingreso de fondos", View = Modules.DicModules[12], Group = linkProceso},
+                new LinkModule() {Id = 15, ParentId = 12, Name = "Egreso de fondos", View = Modules.DicModules[13], Group = linkProceso}
             };
         }
 

@@ -38,6 +38,7 @@
   <ItemGroup>
     <Compile Include="BdoObjectBase.cs" />
     <Compile Include="ComuneroBdo.cs" />
+    <Compile Include="Modules\ModMovimientoFondosBdo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TipoComuneroBdo.cs" />
     <Compile Include="Validation\BrokenRule.cs" />

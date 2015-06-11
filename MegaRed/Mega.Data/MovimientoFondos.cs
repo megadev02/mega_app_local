@@ -14,9 +14,14 @@ namespace Mega.Data
     
     public partial class MovimientoFondos
     {
-        public int NumeroDocumento { get; set; }
+        public MovimientoFondos()
+        {
+            this.ReciboCaja = new HashSet<ReciboCaja>();
+        }
+    
+        public int MovimientoFondosId { get; set; }
+        public Nullable<int> NumeroDocumento { get; set; }
         public string CodDocumento { get; set; }
-        public Nullable<int> MonedaId { get; set; }
         public Nullable<decimal> Importe { get; set; }
         public string OficinaIdProcedencia { get; set; }
         public string OficinaIdDestino { get; set; }
@@ -30,10 +35,14 @@ namespace Mega.Data
         public Nullable<int> Estado { get; set; }
         public string UsuarioAnulacion { get; set; }
         public Nullable<int> ConceptoId { get; set; }
+        public Nullable<int> MonedaId { get; set; }
         public Nullable<int> TipoMovimiento { get; set; }
         public Nullable<System.DateTime> FechaHoraTransaccion { get; set; }
+        public string CodDocumentoDescargo { get; set; }
+        public Nullable<int> NroDocumentoDescargo { get; set; }
         public Nullable<System.DateTime> FechaHoraDescargo { get; set; }
         public bool FlagImpreso { get; set; }
+        public string Observacion { get; set; }
     
         public virtual Banco Banco { get; set; }
         public virtual CajaApertura CajaApertura { get; set; }
@@ -44,5 +53,6 @@ namespace Mega.Data
         public virtual Persona Persona { get; set; }
         public virtual Oficina Oficina { get; set; }
         public virtual Oficina Oficina1 { get; set; }
+        public virtual ICollection<ReciboCaja> ReciboCaja { get; set; }
     }
 }

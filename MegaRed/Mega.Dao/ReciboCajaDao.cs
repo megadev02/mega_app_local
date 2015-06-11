@@ -43,9 +43,9 @@ namespace Mega.Dao
 			{                
                 using (var context = new MegaEntities())
                 {
-                    var objectId = objectBdo.NumeroDocumento;
+                    var objectId = objectBdo.ReciboCajaId;
                     ReciboCaja objectInDb = (from p in context.ReciboCaja
-                                           where p.NumeroDocumento == objectId
+                                           where p.ReciboCajaId == objectId
                                            select p).FirstOrDefault();
 
                     //check product
@@ -53,6 +53,7 @@ namespace Mega.Dao
                     {
                         context.ReciboCaja.Add(new ReciboCaja()
                         {                        
+							ReciboCajaId = objectBdo.ReciboCajaId,
 							NumeroDocumento = objectBdo.NumeroDocumento,
 							CajaAperturaId = objectBdo.CajaAperturaId,
 							CodDocumento = objectBdo.CodDocumento,
@@ -68,7 +69,9 @@ namespace Mega.Dao
 							UsuarioAnulacion = objectBdo.UsuarioAnulacion,
 							ComprobanteCompraId = objectBdo.ComprobanteCompraId,
 							Estado = objectBdo.Estado,
-							ConceptoId = objectBdo.ConceptoId
+							ConceptoId = objectBdo.ConceptoId,
+							CodigoOficinaProcedencia = objectBdo.CodigoOficinaProcedencia,
+							MovimientoFondosId = objectBdo.MovimientoFondosId
 
                         });
                     
@@ -105,14 +108,15 @@ namespace Mega.Dao
             {                
                 using (var context = new MegaEntities())
                 {
-                    var objectId = objectBdo.NumeroDocumento;
+                    var objectId = objectBdo.ReciboCajaId;
                     ReciboCaja objectInDb = (from p in context.ReciboCaja
-                                           where p.NumeroDocumento == objectId
+                                           where p.ReciboCajaId == objectId
                                            select p).FirstOrDefault();
 
                     //check product
                     if (objectInDb != null)
                     {
+						objectInDb.ReciboCajaId = objectBdo.ReciboCajaId;
 						objectInDb.NumeroDocumento = objectBdo.NumeroDocumento;
 						objectInDb.CajaAperturaId = objectBdo.CajaAperturaId;
 						objectInDb.CodDocumento = objectBdo.CodDocumento;
@@ -129,6 +133,8 @@ namespace Mega.Dao
 						objectInDb.ComprobanteCompraId = objectBdo.ComprobanteCompraId;
 						objectInDb.Estado = objectBdo.Estado;
 						objectInDb.ConceptoId = objectBdo.ConceptoId;
+						objectInDb.CodigoOficinaProcedencia = objectBdo.CodigoOficinaProcedencia;
+						objectInDb.MovimientoFondosId = objectBdo.MovimientoFondosId;
 
                         //elementInDb.RowVersion = elementBdo.RowVersion;                    
                     }
@@ -162,12 +168,13 @@ namespace Mega.Dao
                 using (var context = new MegaEntities())
                 {
                     ReciboCaja objectInDb = (from p in context.ReciboCaja
-                                       where p.NumeroDocumento == id
+                                       where p.ReciboCajaId == id
                                        select p).FirstOrDefault();
 
                     if (objectInDb != null)
                         objectBdo = new ReciboCajaBdo()
                         {
+							ReciboCajaId = objectInDb.ReciboCajaId,
 							NumeroDocumento = objectInDb.NumeroDocumento,
 							CajaAperturaId = objectInDb.CajaAperturaId,
 							CodDocumento = objectInDb.CodDocumento,
@@ -183,7 +190,9 @@ namespace Mega.Dao
 							UsuarioAnulacion = objectInDb.UsuarioAnulacion,
 							ComprobanteCompraId = objectInDb.ComprobanteCompraId,
 							Estado = objectInDb.Estado,
-							ConceptoId = objectInDb.ConceptoId
+							ConceptoId = objectInDb.ConceptoId,
+							CodigoOficinaProcedencia = objectInDb.CodigoOficinaProcedencia,
+							MovimientoFondosId = objectInDb.MovimientoFondosId
 
                             
                             //RowVersion = element.RowVersion
@@ -213,6 +222,7 @@ namespace Mega.Dao
                 
                     ReciboCajaBdos.AddRange(items.Select(item => new ReciboCajaBdo()
                     {
+						ReciboCajaId = item.ReciboCajaId,
 						NumeroDocumento = item.NumeroDocumento,
 						CajaAperturaId = item.CajaAperturaId,
 						CodDocumento = item.CodDocumento,
@@ -228,7 +238,9 @@ namespace Mega.Dao
 						UsuarioAnulacion = item.UsuarioAnulacion,
 						ComprobanteCompraId = item.ComprobanteCompraId,
 						Estado = item.Estado,
-						ConceptoId = item.ConceptoId
+						ConceptoId = item.ConceptoId,
+						CodigoOficinaProcedencia = item.CodigoOficinaProcedencia,
+						MovimientoFondosId = item.MovimientoFondosId
 
                     }));
                 }
@@ -255,6 +267,7 @@ namespace Mega.Dao
 
                     ReciboCajaBdos.AddRange(items.Select(item => new ReciboCajaBdo()
                     {
+						ReciboCajaId = item.ReciboCajaId,
 						NumeroDocumento = item.NumeroDocumento,
 						CajaAperturaId = item.CajaAperturaId,
 						CodDocumento = item.CodDocumento,
@@ -270,7 +283,9 @@ namespace Mega.Dao
 						UsuarioAnulacion = item.UsuarioAnulacion,
 						ComprobanteCompraId = item.ComprobanteCompraId,
 						Estado = item.Estado,
-						ConceptoId = item.ConceptoId
+						ConceptoId = item.ConceptoId,
+						CodigoOficinaProcedencia = item.CodigoOficinaProcedencia,
+						MovimientoFondosId = item.MovimientoFondosId
 
                     }));
                 }

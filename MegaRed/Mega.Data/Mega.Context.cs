@@ -12,6 +12,9 @@ namespace Mega.Data
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Objects;
+    using System.Data.Objects.DataClasses;
+    using System.Linq;
     
     public partial class MegaEntities : DbContext
     {
@@ -44,13 +47,11 @@ namespace Mega.Data
         public DbSet<EmpresaAfiliada> EmpresaAfiliada { get; set; }
         public DbSet<EntidadFinanciera> EntidadFinanciera { get; set; }
         public DbSet<Moneda> Moneda { get; set; }
-        public DbSet<MovimientoFondos> MovimientoFondos { get; set; }
         public DbSet<Oficina> Oficina { get; set; }
         public DbSet<Perfil> Perfil { get; set; }
         public DbSet<Persona> Persona { get; set; }
         public DbSet<PersonaDetalle> PersonaDetalle { get; set; }
         public DbSet<PlanContable> PlanContable { get; set; }
-        public DbSet<ReciboCaja> ReciboCaja { get; set; }
         public DbSet<Serie> Serie { get; set; }
         public DbSet<sysdiagrams> sysdiagrams { get; set; }
         public DbSet<TipoCambio> TipoCambio { get; set; }
@@ -58,5 +59,12 @@ namespace Mega.Data
         public DbSet<TipoDocumentoIdentidad> TipoDocumentoIdentidad { get; set; }
         public DbSet<Transferencia> Transferencia { get; set; }
         public DbSet<Usuario> Usuario { get; set; }
+        public DbSet<MovimientoFondos> MovimientoFondos { get; set; }
+        public DbSet<ReciboCaja> ReciboCaja { get; set; }
+    
+        public virtual ObjectResult<spSearchMovFondos_Result> spSearchMovFondos()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spSearchMovFondos_Result>("spSearchMovFondos");
+        }
     }
 }

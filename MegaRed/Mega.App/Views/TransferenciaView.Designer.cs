@@ -42,7 +42,7 @@
             this.tbSolicitante = new Bijcorp.Base.SearchButtonEdit();
             this.tbBeneficiario = new Bijcorp.Base.SearchButtonEdit();
             this.label8 = new System.Windows.Forms.Label();
-            this.cbDocumento1 = new Mega.App.Controls.cbDocumento(this.components);
+            this.cbDocumento1 = new Mega.App.Controls.cbCodDocumento(this.components);
             this.cbMoneda1 = new Mega.App.Controls.cbMoneda(this.components);
             this.cbOficinaDestino = new Mega.App.Controls.cbOficina();
             this.cbOficinaOrigen = new Mega.App.Controls.cbOficina();
@@ -311,6 +311,6 @@
         private Bijcorp.Base.SearchButtonEdit tbBeneficiario;
         private Controls.cbOficina cbOficinaDestino;
         private System.Windows.Forms.Label label8;
-        private Controls.cbDocumento cbDocumento1;
+        private Controls.cbCodDocumento cbDocumento1;
     }
 }

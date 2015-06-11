@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9e4e9fd384cb45f9ac3b05c2a58e9c8f" Name="Diagram1">
+      <Diagram DiagramId="9e4e9fd384cb45f9ac3b05c2a58e9c8f" Name="Diagram1" ZoomLevel="63">
         <EntityTypeShape EntityType="MegaModel.Accesos" Width="1.5" PointX="5.25" PointY="8.125" IsExpanded="true" />
         <EntityTypeShape EntityType="MegaModel.ArqueoCaja" Width="1.5" PointX="7.5" PointY="27.875" IsExpanded="true" />
         <EntityTypeShape EntityType="MegaModel.Asiento" Width="1.5" PointX="0.75" PointY="17.5" IsExpanded="true" />
@@ -16,7 +16,7 @@
         <EntityTypeShape EntityType="MegaModel.Comprobante" Width="1.5" PointX="1.5" PointY="44.5" IsExpanded="true" />
         <EntityTypeShape EntityType="MegaModel.ComprobanteCompra" Width="1.5" PointX="8.25" PointY="38.875" IsExpanded="true" />
         <EntityTypeShape EntityType="MegaModel.Concepto" Width="1.5" PointX="3" PointY="30.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="MegaModel.ContratoEmpresaAfiliado" Width="1.5" PointX="1.5" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MegaModel.ContratoEmpresaAfiliado" Width="1.5" PointX="0.625" PointY="11.375" IsExpanded="true" />
         <EntityTypeShape EntityType="MegaModel.CuentaBancaria" Width="1.5" PointX="6" PointY="21.25" IsExpanded="true" />
         <EntityTypeShape EntityType="MegaModel.DenominacionMoneda" Width="1.5" PointX="5.25" PointY="41.875" IsExpanded="true" />
         <EntityTypeShape EntityType="MegaModel.DepositoPrestamo" Width="1.5" PointX="10.5" PointY="27.75" IsExpanded="true" />
@@ -24,13 +24,11 @@
         <EntityTypeShape EntityType="MegaModel.EmpresaAfiliada" Width="1.5" PointX="1.5" PointY="8" IsExpanded="true" />
         <EntityTypeShape EntityType="MegaModel.EntidadFinanciera" Width="1.5" PointX="3.75" PointY="16.375" IsExpanded="true" />
         <EntityTypeShape EntityType="MegaModel.Moneda" Width="1.5" PointX="3.75" PointY="11.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="MegaModel.MovimientoFondos" Width="1.5" PointX="8.25" PointY="20.125" IsExpanded="true" />
         <EntityTypeShape EntityType="MegaModel.Oficina" Width="1.5" PointX="1.5" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="MegaModel.Perfil" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MegaModel.Persona" Width="1.5" PointX="3.75" PointY="34.875" IsExpanded="true" />
         <EntityTypeShape EntityType="MegaModel.PersonaDetalle" Width="1.5" PointX="6" PointY="36.625" IsExpanded="true" />
         <EntityTypeShape EntityType="MegaModel.PlanContable" Width="1.5" PointX="0.75" PointY="25.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="MegaModel.ReciboCaja" Width="1.5" PointX="10.5" PointY="33.375" IsExpanded="true" />
         <EntityTypeShape EntityType="MegaModel.Serie" Width="1.5" PointX="10.75" PointY="23.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MegaModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MegaModel.TipoCambio" Width="1.5" PointX="8.25" PointY="36" IsExpanded="true" />
@@ -46,7 +44,6 @@
         <AssociationConnector Association="MegaModel.FK__AsientoDe__Asien__412EB0B6" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__AsientoDe__Codig__4222D4EF" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__Banco__EntidadId__4CA06362" ManuallyRouted="false" />
-        <AssociationConnector Association="MegaModel.FK__Movimient__Banco__5441852A" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__Transfere__Banco__68487DD7" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__Caja__CodigoCuen__0425A276" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__CajaApert__CajaI__08EA5793" ManuallyRouted="false" />
@@ -54,8 +51,6 @@
         <AssociationConnector Association="MegaModel.FK__CajaApert__Usuar__09DE7BCC" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__CambioMon__CajaA__1DE57479" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__DepositoP__CajaA__15502E78" ManuallyRouted="false" />
-        <AssociationConnector Association="MegaModel.FK__Movimient__CajaA__5535A963" ManuallyRouted="false" />
-        <AssociationConnector Association="MegaModel.FK__ReciboCaj__CajaA__5BE2A6F2" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__Transfere__CajaA__5D95E53A" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__CambioMon__Conce__1ED998B2" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__CambioMon__Fecha__1CF15040" ManuallyRouted="false" />
@@ -63,11 +58,8 @@
         <AssociationConnector Association="MegaModel.FK__CambioMon__Moned__1BFD2C07" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__Documento__CodCo__31EC6D26" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.R_12" ManuallyRouted="false" />
-        <AssociationConnector Association="MegaModel.FK__ReciboCaj__Compr__5CD6CB2B" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__Concepto__Codigo__0DAF0CB0" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__DepositoP__Conce__164452B1" ManuallyRouted="false" />
-        <AssociationConnector Association="MegaModel.FK__Movimient__Conce__5629CD9C" ManuallyRouted="false" />
-        <AssociationConnector Association="MegaModel.FK__ReciboCaj__Conce__5FB337D6" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__Transfere__Conce__5F7E2DAC" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__ContratoE__Codig__3A81B327" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__ContratoE__Empre__398D8EEE" ManuallyRouted="false" />
@@ -75,30 +67,40 @@
         <AssociationConnector Association="MegaModel.FK__CuentaBan__Codig__48CFD27E" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__CuentaBan__Entid__47DBAE45" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__CuentaBan__Moned__49C3F6B7" ManuallyRouted="false" />
-        <AssociationConnector Association="MegaModel.FK__Movimient__Numer__534D60F1" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__Denominac__Moned__29572725" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__DepositoP__Codig__145C0A3F" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__DepositoP__Fecha__182C9B23" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__DepositoP__Moned__173876EA" ManuallyRouted="false" />
-        <AssociationConnector Association="MegaModel.FK__Movimient__CodDo__52593CB8" ManuallyRouted="false" />
-        <AssociationConnector Association="MegaModel.FK__ReciboCaj__CodDo__5DCAEF64" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__Transfere__CodDo__5E8A0973" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__EmpresaAf__Codig__34C8D9D1" ManuallyRouted="false" />
-        <AssociationConnector Association="MegaModel.FK__Movimient__Moned__571DF1D5" ManuallyRouted="false" />
-        <AssociationConnector Association="MegaModel.FK__ReciboCaj__Moned__60A75C0F" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__Transfere__Moned__6B24EA82" ManuallyRouted="false" />
-        <AssociationConnector Association="MegaModel.FK__Movimient__Codig__5165187F" ManuallyRouted="false" />
-        <AssociationConnector Association="MegaModel.FK__Movimient__Ofici__4F7CD00D" ManuallyRouted="false" />
-        <AssociationConnector Association="MegaModel.FK__Movimient__Ofici__5070F446" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__Transfere__Ofici__6166761E" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__Transfere__Ofici__625A9A57" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.R_84" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__Persona__TipoDoc__7F60ED59" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__PersonaDe__Codig__21B6055D" ManuallyRouted="false" />
-        <AssociationConnector Association="MegaModel.FK__ReciboCaj__Codig__5EBF139D" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__Transfere__Perso__656C112C" ManuallyRouted="false" />
         <AssociationConnector Association="MegaModel.FK__Transfere__Perso__66603565" ManuallyRouted="false" />
-      </Diagram>
+        <EntityTypeShape EntityType="MegaModel.MovimientoFondos" Width="1.5" PointX="1.7216299705773732" PointY="11.544184079181489" />
+        <EntityTypeShape EntityType="MegaModel.ReciboCaja" Width="1.5" PointX="4.915220212617526" PointY="1.1188600962603745" />
+        <AssociationConnector Association="MegaModel.FK__Movimient__Banco__0F2D40CE" />
+        <AssociationConnector Association="MegaModel.FK__Movimient__CajaA__10216507" />
+        <AssociationConnector Association="MegaModel.FK__ReciboCaj__CajaA__19AACF41" />
+        <AssociationConnector Association="MegaModel.FK__ReciboCaj__Compr__1A9EF37A" />
+        <AssociationConnector Association="MegaModel.FK__Movimient__Conce__11158940" />
+        <AssociationConnector Association="MegaModel.FK__ReciboCaj__Conce__1D7B6025" />
+        <AssociationConnector Association="MegaModel.FK__Movimient__Numer__0E391C95" />
+        <AssociationConnector Association="MegaModel.FK__Movimient__CodDo__0D44F85C" />
+        <AssociationConnector Association="MegaModel.FK__ReciboCaj__CodDo__1B9317B3" />
+        <AssociationConnector Association="MegaModel.FK__Movimient__Moned__1209AD79" />
+        <AssociationConnector Association="MegaModel.FK__ReciboCaj__Moned__1E6F845E" />
+        <AssociationConnector Association="MegaModel.FK__Movimient__Codig__0C50D423" />
+        <AssociationConnector Association="MegaModel.FK__Movimient__Ofici__0A688BB1" />
+        <AssociationConnector Association="MegaModel.FK__Movimient__Ofici__0B5CAFEA" />
+        <AssociationConnector Association="MegaModel.FK__ReciboCaj__Movim__2057CCD0" />
+        <AssociationConnector Association="MegaModel.FK__ReciboCaj__Codig__1F63A897" />
+        <AssociationConnector Association="MegaModel.FK__ReciboCaj__Codig__1C873BEC" />
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

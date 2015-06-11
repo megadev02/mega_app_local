@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="MegaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="MegaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="MegaModelStoreContainer">
           <EntitySet Name="Accesos" EntityType="MegaModel.Store.Accesos" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ArqueoCaja" EntityType="MegaModel.Store.ArqueoCaja" store:Type="Tables" Schema="dbo" />
@@ -167,39 +167,39 @@
             <End Role="Persona" EntitySet="Persona" />
             <End Role="EmpresaAfiliada" EntitySet="EmpresaAfiliada" />
           </AssociationSet>
-          <AssociationSet Name="FK__Movimient__Banco__5441852A" Association="MegaModel.Store.FK__Movimient__Banco__5441852A">
+          <AssociationSet Name="FK__Movimient__Banco__0F2D40CE" Association="MegaModel.Store.FK__Movimient__Banco__0F2D40CE">
             <End Role="Banco" EntitySet="Banco" />
             <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Movimient__CajaA__5535A963" Association="MegaModel.Store.FK__Movimient__CajaA__5535A963">
+          <AssociationSet Name="FK__Movimient__CajaA__10216507" Association="MegaModel.Store.FK__Movimient__CajaA__10216507">
             <End Role="CajaApertura" EntitySet="CajaApertura" />
             <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Movimient__CodDo__52593CB8" Association="MegaModel.Store.FK__Movimient__CodDo__52593CB8">
+          <AssociationSet Name="FK__Movimient__CodDo__0D44F85C" Association="MegaModel.Store.FK__Movimient__CodDo__0D44F85C">
             <End Role="Documento" EntitySet="Documento" />
             <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Movimient__Codig__5165187F" Association="MegaModel.Store.FK__Movimient__Codig__5165187F">
+          <AssociationSet Name="FK__Movimient__Codig__0C50D423" Association="MegaModel.Store.FK__Movimient__Codig__0C50D423">
             <End Role="Persona" EntitySet="Persona" />
             <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Movimient__Conce__5629CD9C" Association="MegaModel.Store.FK__Movimient__Conce__5629CD9C">
+          <AssociationSet Name="FK__Movimient__Conce__11158940" Association="MegaModel.Store.FK__Movimient__Conce__11158940">
             <End Role="Concepto" EntitySet="Concepto" />
             <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Movimient__Moned__571DF1D5" Association="MegaModel.Store.FK__Movimient__Moned__571DF1D5">
+          <AssociationSet Name="FK__Movimient__Moned__1209AD79" Association="MegaModel.Store.FK__Movimient__Moned__1209AD79">
             <End Role="Moneda" EntitySet="Moneda" />
             <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Movimient__Numer__534D60F1" Association="MegaModel.Store.FK__Movimient__Numer__534D60F1">
+          <AssociationSet Name="FK__Movimient__Numer__0E391C95" Association="MegaModel.Store.FK__Movimient__Numer__0E391C95">
             <End Role="CuentaBancaria" EntitySet="CuentaBancaria" />
             <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Movimient__Ofici__4F7CD00D" Association="MegaModel.Store.FK__Movimient__Ofici__4F7CD00D">
+          <AssociationSet Name="FK__Movimient__Ofici__0A688BB1" Association="MegaModel.Store.FK__Movimient__Ofici__0A688BB1">
             <End Role="Oficina" EntitySet="Oficina" />
             <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Movimient__Ofici__5070F446" Association="MegaModel.Store.FK__Movimient__Ofici__5070F446">
+          <AssociationSet Name="FK__Movimient__Ofici__0B5CAFEA" Association="MegaModel.Store.FK__Movimient__Ofici__0B5CAFEA">
             <End Role="Oficina" EntitySet="Oficina" />
             <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
           </AssociationSet>
@@ -211,28 +211,36 @@
             <End Role="Persona" EntitySet="Persona" />
             <End Role="PersonaDetalle" EntitySet="PersonaDetalle" />
           </AssociationSet>
-          <AssociationSet Name="FK__ReciboCaj__CajaA__5BE2A6F2" Association="MegaModel.Store.FK__ReciboCaj__CajaA__5BE2A6F2">
+          <AssociationSet Name="FK__ReciboCaj__CajaA__19AACF41" Association="MegaModel.Store.FK__ReciboCaj__CajaA__19AACF41">
             <End Role="CajaApertura" EntitySet="CajaApertura" />
             <End Role="ReciboCaja" EntitySet="ReciboCaja" />
           </AssociationSet>
-          <AssociationSet Name="FK__ReciboCaj__CodDo__5DCAEF64" Association="MegaModel.Store.FK__ReciboCaj__CodDo__5DCAEF64">
+          <AssociationSet Name="FK__ReciboCaj__CodDo__1B9317B3" Association="MegaModel.Store.FK__ReciboCaj__CodDo__1B9317B3">
             <End Role="Documento" EntitySet="Documento" />
             <End Role="ReciboCaja" EntitySet="ReciboCaja" />
           </AssociationSet>
-          <AssociationSet Name="FK__ReciboCaj__Codig__5EBF139D" Association="MegaModel.Store.FK__ReciboCaj__Codig__5EBF139D">
+          <AssociationSet Name="FK__ReciboCaj__Codig__1C873BEC" Association="MegaModel.Store.FK__ReciboCaj__Codig__1C873BEC">
             <End Role="Persona" EntitySet="Persona" />
             <End Role="ReciboCaja" EntitySet="ReciboCaja" />
           </AssociationSet>
-          <AssociationSet Name="FK__ReciboCaj__Compr__5CD6CB2B" Association="MegaModel.Store.FK__ReciboCaj__Compr__5CD6CB2B">
+          <AssociationSet Name="FK__ReciboCaj__Codig__1F63A897" Association="MegaModel.Store.FK__ReciboCaj__Codig__1F63A897">
+            <End Role="Oficina" EntitySet="Oficina" />
+            <End Role="ReciboCaja" EntitySet="ReciboCaja" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ReciboCaj__Compr__1A9EF37A" Association="MegaModel.Store.FK__ReciboCaj__Compr__1A9EF37A">
             <End Role="ComprobanteCompra" EntitySet="ComprobanteCompra" />
             <End Role="ReciboCaja" EntitySet="ReciboCaja" />
           </AssociationSet>
-          <AssociationSet Name="FK__ReciboCaj__Conce__5FB337D6" Association="MegaModel.Store.FK__ReciboCaj__Conce__5FB337D6">
+          <AssociationSet Name="FK__ReciboCaj__Conce__1D7B6025" Association="MegaModel.Store.FK__ReciboCaj__Conce__1D7B6025">
             <End Role="Concepto" EntitySet="Concepto" />
             <End Role="ReciboCaja" EntitySet="ReciboCaja" />
           </AssociationSet>
-          <AssociationSet Name="FK__ReciboCaj__Moned__60A75C0F" Association="MegaModel.Store.FK__ReciboCaj__Moned__60A75C0F">
+          <AssociationSet Name="FK__ReciboCaj__Moned__1E6F845E" Association="MegaModel.Store.FK__ReciboCaj__Moned__1E6F845E">
             <End Role="Moneda" EntitySet="Moneda" />
+            <End Role="ReciboCaja" EntitySet="ReciboCaja" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ReciboCaj__Movim__2057CCD0" Association="MegaModel.Store.FK__ReciboCaj__Movim__2057CCD0">
+            <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
             <End Role="ReciboCaja" EntitySet="ReciboCaja" />
           </AssociationSet>
           <AssociationSet Name="FK__Transfere__Banco__68487DD7" Association="MegaModel.Store.FK__Transfere__Banco__68487DD7">
@@ -500,11 +508,11 @@
         </EntityType>
         <EntityType Name="MovimientoFondos">
           <Key>
-            <PropertyRef Name="NumeroDocumento" />
+            <PropertyRef Name="MovimientoFondosId" />
           </Key>
-          <Property Name="NumeroDocumento" Type="int" Nullable="false" />
+          <Property Name="MovimientoFondosId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NumeroDocumento" Type="int" />
           <Property Name="CodDocumento" Type="varchar" MaxLength="6" />
-          <Property Name="MonedaId" Type="int" />
           <Property Name="Importe" Type="numeric" Precision="10" Scale="2" />
           <Property Name="OficinaIdProcedencia" Type="varchar" MaxLength="10" />
           <Property Name="OficinaIdDestino" Type="varchar" MaxLength="10" />
@@ -518,10 +526,14 @@
           <Property Name="Estado" Type="int" />
           <Property Name="UsuarioAnulacion" Type="varchar" MaxLength="20" />
           <Property Name="ConceptoId" Type="int" />
+          <Property Name="MonedaId" Type="int" />
           <Property Name="TipoMovimiento" Type="int" />
           <Property Name="FechaHoraTransaccion" Type="smalldatetime" />
+          <Property Name="CodDocumentoDescargo" Type="varchar" MaxLength="6" />
+          <Property Name="NroDocumentoDescargo" Type="int" />
           <Property Name="FechaHoraDescargo" Type="smalldatetime" />
           <Property Name="FlagImpreso" Type="bit" Nullable="false" />
+          <Property Name="Observacion" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Oficina">
           <Key>
@@ -588,9 +600,10 @@
         </EntityType>
         <EntityType Name="ReciboCaja">
           <Key>
-            <PropertyRef Name="NumeroDocumento" />
+            <PropertyRef Name="ReciboCajaId" />
           </Key>
-          <Property Name="NumeroDocumento" Type="int" Nullable="false" />
+          <Property Name="ReciboCajaId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NumeroDocumento" Type="int" />
           <Property Name="CajaAperturaId" Type="int" />
           <Property Name="CodDocumento" Type="varchar" MaxLength="6" />
           <Property Name="TipoRecibo" Type="int" />
@@ -606,6 +619,8 @@
           <Property Name="ComprobanteCompraId" Type="int" />
           <Property Name="Estado" Type="int" />
           <Property Name="ConceptoId" Type="int" />
+          <Property Name="CodigoOficinaProcedencia" Type="varchar" MaxLength="10" />
+          <Property Name="MovimientoFondosId" Type="int" />
         </EntityType>
         <EntityType Name="Serie">
           <Key>
@@ -1085,7 +1100,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Movimient__Banco__5441852A">
+        <Association Name="FK__Movimient__Banco__0F2D40CE">
           <End Role="Banco" Type="MegaModel.Store.Banco" Multiplicity="0..1" />
           <End Role="MovimientoFondos" Type="MegaModel.Store.MovimientoFondos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1097,7 +1112,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Movimient__CajaA__5535A963">
+        <Association Name="FK__Movimient__CajaA__10216507">
           <End Role="CajaApertura" Type="MegaModel.Store.CajaApertura" Multiplicity="0..1" />
           <End Role="MovimientoFondos" Type="MegaModel.Store.MovimientoFondos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1109,7 +1124,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Movimient__CodDo__52593CB8">
+        <Association Name="FK__Movimient__CodDo__0D44F85C">
           <End Role="Documento" Type="MegaModel.Store.Documento" Multiplicity="0..1" />
           <End Role="MovimientoFondos" Type="MegaModel.Store.MovimientoFondos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1121,7 +1136,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Movimient__Codig__5165187F">
+        <Association Name="FK__Movimient__Codig__0C50D423">
           <End Role="Persona" Type="MegaModel.Store.Persona" Multiplicity="0..1" />
           <End Role="MovimientoFondos" Type="MegaModel.Store.MovimientoFondos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1133,7 +1148,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Movimient__Conce__5629CD9C">
+        <Association Name="FK__Movimient__Conce__11158940">
           <End Role="Concepto" Type="MegaModel.Store.Concepto" Multiplicity="0..1" />
           <End Role="MovimientoFondos" Type="MegaModel.Store.MovimientoFondos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1145,7 +1160,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Movimient__Moned__571DF1D5">
+        <Association Name="FK__Movimient__Moned__1209AD79">
           <End Role="Moneda" Type="MegaModel.Store.Moneda" Multiplicity="0..1" />
           <End Role="MovimientoFondos" Type="MegaModel.Store.MovimientoFondos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1157,7 +1172,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Movimient__Numer__534D60F1">
+        <Association Name="FK__Movimient__Numer__0E391C95">
           <End Role="CuentaBancaria" Type="MegaModel.Store.CuentaBancaria" Multiplicity="0..1" />
           <End Role="MovimientoFondos" Type="MegaModel.Store.MovimientoFondos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1169,7 +1184,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Movimient__Ofici__4F7CD00D">
+        <Association Name="FK__Movimient__Ofici__0A688BB1">
           <End Role="Oficina" Type="MegaModel.Store.Oficina" Multiplicity="0..1" />
           <End Role="MovimientoFondos" Type="MegaModel.Store.MovimientoFondos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1181,7 +1196,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Movimient__Ofici__5070F446">
+        <Association Name="FK__Movimient__Ofici__0B5CAFEA">
           <End Role="Oficina" Type="MegaModel.Store.Oficina" Multiplicity="0..1" />
           <End Role="MovimientoFondos" Type="MegaModel.Store.MovimientoFondos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1217,7 +1232,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ReciboCaj__CajaA__5BE2A6F2">
+        <Association Name="FK__ReciboCaj__CajaA__19AACF41">
           <End Role="CajaApertura" Type="MegaModel.Store.CajaApertura" Multiplicity="0..1" />
           <End Role="ReciboCaja" Type="MegaModel.Store.ReciboCaja" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1229,7 +1244,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ReciboCaj__CodDo__5DCAEF64">
+        <Association Name="FK__ReciboCaj__CodDo__1B9317B3">
           <End Role="Documento" Type="MegaModel.Store.Documento" Multiplicity="0..1" />
           <End Role="ReciboCaja" Type="MegaModel.Store.ReciboCaja" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1241,7 +1256,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ReciboCaj__Codig__5EBF139D">
+        <Association Name="FK__ReciboCaj__Codig__1C873BEC">
           <End Role="Persona" Type="MegaModel.Store.Persona" Multiplicity="0..1" />
           <End Role="ReciboCaja" Type="MegaModel.Store.ReciboCaja" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1253,7 +1268,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ReciboCaj__Compr__5CD6CB2B">
+        <Association Name="FK__ReciboCaj__Codig__1F63A897">
+          <End Role="Oficina" Type="MegaModel.Store.Oficina" Multiplicity="0..1" />
+          <End Role="ReciboCaja" Type="MegaModel.Store.ReciboCaja" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Oficina">
+              <PropertyRef Name="CodigoOficina" />
+            </Principal>
+            <Dependent Role="ReciboCaja">
+              <PropertyRef Name="CodigoOficinaProcedencia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ReciboCaj__Compr__1A9EF37A">
           <End Role="ComprobanteCompra" Type="MegaModel.Store.ComprobanteCompra" Multiplicity="0..1" />
           <End Role="ReciboCaja" Type="MegaModel.Store.ReciboCaja" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1265,7 +1292,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ReciboCaj__Conce__5FB337D6">
+        <Association Name="FK__ReciboCaj__Conce__1D7B6025">
           <End Role="Concepto" Type="MegaModel.Store.Concepto" Multiplicity="0..1" />
           <End Role="ReciboCaja" Type="MegaModel.Store.ReciboCaja" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1277,7 +1304,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ReciboCaj__Moned__60A75C0F">
+        <Association Name="FK__ReciboCaj__Moned__1E6F845E">
           <End Role="Moneda" Type="MegaModel.Store.Moneda" Multiplicity="0..1" />
           <End Role="ReciboCaja" Type="MegaModel.Store.ReciboCaja" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1286,6 +1313,18 @@
             </Principal>
             <Dependent Role="ReciboCaja">
               <PropertyRef Name="MonedaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ReciboCaj__Movim__2057CCD0">
+          <End Role="MovimientoFondos" Type="MegaModel.Store.MovimientoFondos" Multiplicity="0..1" />
+          <End Role="ReciboCaja" Type="MegaModel.Store.ReciboCaja" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MovimientoFondos">
+              <PropertyRef Name="MovimientoFondosId" />
+            </Principal>
+            <Dependent Role="ReciboCaja">
+              <PropertyRef Name="MovimientoFondosId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1421,8 +1460,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
-    </edmx:StorageModels>
+        <Function Name="spSearchMovFondos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MegaModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1446,13 +1485,11 @@
           <EntitySet Name="EmpresaAfiliada" EntityType="MegaModel.EmpresaAfiliada" />
           <EntitySet Name="EntidadFinanciera" EntityType="MegaModel.EntidadFinanciera" />
           <EntitySet Name="Moneda" EntityType="MegaModel.Moneda" />
-          <EntitySet Name="MovimientoFondos" EntityType="MegaModel.MovimientoFondos" />
           <EntitySet Name="Oficina" EntityType="MegaModel.Oficina" />
           <EntitySet Name="Perfil" EntityType="MegaModel.Perfil" />
           <EntitySet Name="Persona" EntityType="MegaModel.Persona" />
           <EntitySet Name="PersonaDetalle" EntityType="MegaModel.PersonaDetalle" />
           <EntitySet Name="PlanContable" EntityType="MegaModel.PlanContable" />
-          <EntitySet Name="ReciboCaja" EntityType="MegaModel.ReciboCaja" />
           <EntitySet Name="Serie" EntityType="MegaModel.Serie" />
           <EntitySet Name="sysdiagrams" EntityType="MegaModel.sysdiagrams" />
           <EntitySet Name="TipoCambio" EntityType="MegaModel.TipoCambio" />
@@ -1492,10 +1529,6 @@
             <End Role="EntidadFinanciera" EntitySet="EntidadFinanciera" />
             <End Role="Banco" EntitySet="Banco" />
           </AssociationSet>
-          <AssociationSet Name="FK__Movimient__Banco__5441852A" Association="MegaModel.FK__Movimient__Banco__5441852A">
-            <End Role="Banco" EntitySet="Banco" />
-            <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
-          </AssociationSet>
           <AssociationSet Name="FK__Transfere__Banco__68487DD7" Association="MegaModel.FK__Transfere__Banco__68487DD7">
             <End Role="Banco" EntitySet="Banco" />
             <End Role="Transferencia" EntitySet="Transferencia" />
@@ -1523,14 +1556,6 @@
           <AssociationSet Name="FK__DepositoP__CajaA__15502E78" Association="MegaModel.FK__DepositoP__CajaA__15502E78">
             <End Role="CajaApertura" EntitySet="CajaApertura" />
             <End Role="DepositoPrestamo" EntitySet="DepositoPrestamo" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Movimient__CajaA__5535A963" Association="MegaModel.FK__Movimient__CajaA__5535A963">
-            <End Role="CajaApertura" EntitySet="CajaApertura" />
-            <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
-          </AssociationSet>
-          <AssociationSet Name="FK__ReciboCaj__CajaA__5BE2A6F2" Association="MegaModel.FK__ReciboCaj__CajaA__5BE2A6F2">
-            <End Role="CajaApertura" EntitySet="CajaApertura" />
-            <End Role="ReciboCaja" EntitySet="ReciboCaja" />
           </AssociationSet>
           <AssociationSet Name="FK__Transfere__CajaA__5D95E53A" Association="MegaModel.FK__Transfere__CajaA__5D95E53A">
             <End Role="CajaApertura" EntitySet="CajaApertura" />
@@ -1560,10 +1585,6 @@
             <End Role="Comprobante" EntitySet="Comprobante" />
             <End Role="Serie" EntitySet="Serie" />
           </AssociationSet>
-          <AssociationSet Name="FK__ReciboCaj__Compr__5CD6CB2B" Association="MegaModel.FK__ReciboCaj__Compr__5CD6CB2B">
-            <End Role="ComprobanteCompra" EntitySet="ComprobanteCompra" />
-            <End Role="ReciboCaja" EntitySet="ReciboCaja" />
-          </AssociationSet>
           <AssociationSet Name="FK__Concepto__Codigo__0DAF0CB0" Association="MegaModel.FK__Concepto__Codigo__0DAF0CB0">
             <End Role="PlanContable" EntitySet="PlanContable" />
             <End Role="Concepto" EntitySet="Concepto" />
@@ -1571,14 +1592,6 @@
           <AssociationSet Name="FK__DepositoP__Conce__164452B1" Association="MegaModel.FK__DepositoP__Conce__164452B1">
             <End Role="Concepto" EntitySet="Concepto" />
             <End Role="DepositoPrestamo" EntitySet="DepositoPrestamo" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Movimient__Conce__5629CD9C" Association="MegaModel.FK__Movimient__Conce__5629CD9C">
-            <End Role="Concepto" EntitySet="Concepto" />
-            <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
-          </AssociationSet>
-          <AssociationSet Name="FK__ReciboCaj__Conce__5FB337D6" Association="MegaModel.FK__ReciboCaj__Conce__5FB337D6">
-            <End Role="Concepto" EntitySet="Concepto" />
-            <End Role="ReciboCaja" EntitySet="ReciboCaja" />
           </AssociationSet>
           <AssociationSet Name="FK__Transfere__Conce__5F7E2DAC" Association="MegaModel.FK__Transfere__Conce__5F7E2DAC">
             <End Role="Concepto" EntitySet="Concepto" />
@@ -1608,10 +1621,6 @@
             <End Role="Moneda" EntitySet="Moneda" />
             <End Role="CuentaBancaria" EntitySet="CuentaBancaria" />
           </AssociationSet>
-          <AssociationSet Name="FK__Movimient__Numer__534D60F1" Association="MegaModel.FK__Movimient__Numer__534D60F1">
-            <End Role="CuentaBancaria" EntitySet="CuentaBancaria" />
-            <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
-          </AssociationSet>
           <AssociationSet Name="FK__Denominac__Moned__29572725" Association="MegaModel.FK__Denominac__Moned__29572725">
             <End Role="Moneda" EntitySet="Moneda" />
             <End Role="DenominacionMoneda" EntitySet="DenominacionMoneda" />
@@ -1628,14 +1637,6 @@
             <End Role="Moneda" EntitySet="Moneda" />
             <End Role="DepositoPrestamo" EntitySet="DepositoPrestamo" />
           </AssociationSet>
-          <AssociationSet Name="FK__Movimient__CodDo__52593CB8" Association="MegaModel.FK__Movimient__CodDo__52593CB8">
-            <End Role="Documento" EntitySet="Documento" />
-            <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
-          </AssociationSet>
-          <AssociationSet Name="FK__ReciboCaj__CodDo__5DCAEF64" Association="MegaModel.FK__ReciboCaj__CodDo__5DCAEF64">
-            <End Role="Documento" EntitySet="Documento" />
-            <End Role="ReciboCaja" EntitySet="ReciboCaja" />
-          </AssociationSet>
           <AssociationSet Name="FK__Transfere__CodDo__5E8A0973" Association="MegaModel.FK__Transfere__CodDo__5E8A0973">
             <End Role="Documento" EntitySet="Documento" />
             <End Role="Transferencia" EntitySet="Transferencia" />
@@ -1644,29 +1645,9 @@
             <End Role="Persona" EntitySet="Persona" />
             <End Role="EmpresaAfiliada" EntitySet="EmpresaAfiliada" />
           </AssociationSet>
-          <AssociationSet Name="FK__Movimient__Moned__571DF1D5" Association="MegaModel.FK__Movimient__Moned__571DF1D5">
-            <End Role="Moneda" EntitySet="Moneda" />
-            <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
-          </AssociationSet>
-          <AssociationSet Name="FK__ReciboCaj__Moned__60A75C0F" Association="MegaModel.FK__ReciboCaj__Moned__60A75C0F">
-            <End Role="Moneda" EntitySet="Moneda" />
-            <End Role="ReciboCaja" EntitySet="ReciboCaja" />
-          </AssociationSet>
           <AssociationSet Name="FK__Transfere__Moned__6B24EA82" Association="MegaModel.FK__Transfere__Moned__6B24EA82">
             <End Role="Moneda" EntitySet="Moneda" />
             <End Role="Transferencia" EntitySet="Transferencia" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Movimient__Codig__5165187F" Association="MegaModel.FK__Movimient__Codig__5165187F">
-            <End Role="Persona" EntitySet="Persona" />
-            <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Movimient__Ofici__4F7CD00D" Association="MegaModel.FK__Movimient__Ofici__4F7CD00D">
-            <End Role="Oficina" EntitySet="Oficina" />
-            <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Movimient__Ofici__5070F446" Association="MegaModel.FK__Movimient__Ofici__5070F446">
-            <End Role="Oficina" EntitySet="Oficina" />
-            <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
           </AssociationSet>
           <AssociationSet Name="FK__Transfere__Ofici__6166761E" Association="MegaModel.FK__Transfere__Ofici__6166761E">
             <End Role="Oficina" EntitySet="Oficina" />
@@ -1688,10 +1669,6 @@
             <End Role="Persona" EntitySet="Persona" />
             <End Role="PersonaDetalle" EntitySet="PersonaDetalle" />
           </AssociationSet>
-          <AssociationSet Name="FK__ReciboCaj__Codig__5EBF139D" Association="MegaModel.FK__ReciboCaj__Codig__5EBF139D">
-            <End Role="Persona" EntitySet="Persona" />
-            <End Role="ReciboCaja" EntitySet="ReciboCaja" />
-          </AssociationSet>
           <AssociationSet Name="FK__Transfere__Perso__656C112C" Association="MegaModel.FK__Transfere__Perso__656C112C">
             <End Role="Persona" EntitySet="Persona" />
             <End Role="Transferencia" EntitySet="Transferencia" />
@@ -1700,7 +1677,79 @@
             <End Role="Persona" EntitySet="Persona" />
             <End Role="Transferencia" EntitySet="Transferencia" />
           </AssociationSet>
-        </EntityContainer>
+          <EntitySet Name="MovimientoFondos" EntityType="MegaModel.MovimientoFondos" />
+          <EntitySet Name="ReciboCaja" EntityType="MegaModel.ReciboCaja" />
+          <AssociationSet Name="FK__Movimient__Banco__0F2D40CE" Association="MegaModel.FK__Movimient__Banco__0F2D40CE">
+            <End Role="Banco" EntitySet="Banco" />
+            <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Movimient__CajaA__10216507" Association="MegaModel.FK__Movimient__CajaA__10216507">
+            <End Role="CajaApertura" EntitySet="CajaApertura" />
+            <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ReciboCaj__CajaA__19AACF41" Association="MegaModel.FK__ReciboCaj__CajaA__19AACF41">
+            <End Role="CajaApertura" EntitySet="CajaApertura" />
+            <End Role="ReciboCaja" EntitySet="ReciboCaja" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ReciboCaj__Compr__1A9EF37A" Association="MegaModel.FK__ReciboCaj__Compr__1A9EF37A">
+            <End Role="ComprobanteCompra" EntitySet="ComprobanteCompra" />
+            <End Role="ReciboCaja" EntitySet="ReciboCaja" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Movimient__Conce__11158940" Association="MegaModel.FK__Movimient__Conce__11158940">
+            <End Role="Concepto" EntitySet="Concepto" />
+            <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ReciboCaj__Conce__1D7B6025" Association="MegaModel.FK__ReciboCaj__Conce__1D7B6025">
+            <End Role="Concepto" EntitySet="Concepto" />
+            <End Role="ReciboCaja" EntitySet="ReciboCaja" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Movimient__Numer__0E391C95" Association="MegaModel.FK__Movimient__Numer__0E391C95">
+            <End Role="CuentaBancaria" EntitySet="CuentaBancaria" />
+            <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Movimient__CodDo__0D44F85C" Association="MegaModel.FK__Movimient__CodDo__0D44F85C">
+            <End Role="Documento" EntitySet="Documento" />
+            <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ReciboCaj__CodDo__1B9317B3" Association="MegaModel.FK__ReciboCaj__CodDo__1B9317B3">
+            <End Role="Documento" EntitySet="Documento" />
+            <End Role="ReciboCaja" EntitySet="ReciboCaja" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Movimient__Moned__1209AD79" Association="MegaModel.FK__Movimient__Moned__1209AD79">
+            <End Role="Moneda" EntitySet="Moneda" />
+            <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ReciboCaj__Moned__1E6F845E" Association="MegaModel.FK__ReciboCaj__Moned__1E6F845E">
+            <End Role="Moneda" EntitySet="Moneda" />
+            <End Role="ReciboCaja" EntitySet="ReciboCaja" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Movimient__Codig__0C50D423" Association="MegaModel.FK__Movimient__Codig__0C50D423">
+            <End Role="Persona" EntitySet="Persona" />
+            <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Movimient__Ofici__0A688BB1" Association="MegaModel.FK__Movimient__Ofici__0A688BB1">
+            <End Role="Oficina" EntitySet="Oficina" />
+            <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Movimient__Ofici__0B5CAFEA" Association="MegaModel.FK__Movimient__Ofici__0B5CAFEA">
+            <End Role="Oficina" EntitySet="Oficina" />
+            <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ReciboCaj__Movim__2057CCD0" Association="MegaModel.FK__ReciboCaj__Movim__2057CCD0">
+            <End Role="MovimientoFondos" EntitySet="MovimientoFondos" />
+            <End Role="ReciboCaja" EntitySet="ReciboCaja" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ReciboCaj__Codig__1F63A897" Association="MegaModel.FK__ReciboCaj__Codig__1F63A897">
+            <End Role="Oficina" EntitySet="Oficina" />
+            <End Role="ReciboCaja" EntitySet="ReciboCaja" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ReciboCaj__Codig__1C873BEC" Association="MegaModel.FK__ReciboCaj__Codig__1C873BEC">
+            <End Role="Persona" EntitySet="Persona" />
+            <End Role="ReciboCaja" EntitySet="ReciboCaja" />
+          </AssociationSet>
+          <FunctionImport Name="spSearchMovFondos" ReturnType="Collection(MegaModel.spSearchMovFondos_Result)">
+          </FunctionImport>
+          </EntityContainer>
         <EntityType Name="Accesos">
           <Key>
             <PropertyRef Name="AccesoId" />
@@ -1765,8 +1814,8 @@
           <Property Name="Telefono3" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
           <Property Name="Estado" Type="Boolean" />
           <NavigationProperty Name="EntidadFinanciera" Relationship="MegaModel.FK__Banco__EntidadId__4CA06362" FromRole="Banco" ToRole="EntidadFinanciera" />
-          <NavigationProperty Name="MovimientoFondos" Relationship="MegaModel.FK__Movimient__Banco__5441852A" FromRole="Banco" ToRole="MovimientoFondos" />
           <NavigationProperty Name="Transferencia" Relationship="MegaModel.FK__Transfere__Banco__68487DD7" FromRole="Banco" ToRole="Transferencia" />
+          <NavigationProperty Name="MovimientoFondos" Relationship="MegaModel.FK__Movimient__Banco__0F2D40CE" FromRole="Banco" ToRole="MovimientoFondos" />
         </EntityType>
         <EntityType Name="Caja">
           <Key>
@@ -1803,9 +1852,9 @@
           <NavigationProperty Name="Usuario" Relationship="MegaModel.FK__CajaApert__Usuar__09DE7BCC" FromRole="CajaApertura" ToRole="Usuario" />
           <NavigationProperty Name="CambioMoneda" Relationship="MegaModel.FK__CambioMon__CajaA__1DE57479" FromRole="CajaApertura" ToRole="CambioMoneda" />
           <NavigationProperty Name="DepositoPrestamo" Relationship="MegaModel.FK__DepositoP__CajaA__15502E78" FromRole="CajaApertura" ToRole="DepositoPrestamo" />
-          <NavigationProperty Name="MovimientoFondos" Relationship="MegaModel.FK__Movimient__CajaA__5535A963" FromRole="CajaApertura" ToRole="MovimientoFondos" />
-          <NavigationProperty Name="ReciboCaja" Relationship="MegaModel.FK__ReciboCaj__CajaA__5BE2A6F2" FromRole="CajaApertura" ToRole="ReciboCaja" />
           <NavigationProperty Name="Transferencia" Relationship="MegaModel.FK__Transfere__CajaA__5D95E53A" FromRole="CajaApertura" ToRole="Transferencia" />
+          <NavigationProperty Name="MovimientoFondos" Relationship="MegaModel.FK__Movimient__CajaA__10216507" FromRole="CajaApertura" ToRole="MovimientoFondos" />
+          <NavigationProperty Name="ReciboCaja" Relationship="MegaModel.FK__ReciboCaj__CajaA__19AACF41" FromRole="CajaApertura" ToRole="ReciboCaja" />
         </EntityType>
         <EntityType Name="CambioMoneda">
           <Key>
@@ -1847,7 +1896,7 @@
           <Property Name="RazonSocial" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
           <Property Name="NumeroDocumento" Type="Int32" />
           <Property Name="NumeroSerie" Type="Int32" />
-          <NavigationProperty Name="ReciboCaja" Relationship="MegaModel.FK__ReciboCaj__Compr__5CD6CB2B" FromRole="ComprobanteCompra" ToRole="ReciboCaja" />
+          <NavigationProperty Name="ReciboCaja" Relationship="MegaModel.FK__ReciboCaj__Compr__1A9EF37A" FromRole="ComprobanteCompra" ToRole="ReciboCaja" />
         </EntityType>
         <EntityType Name="Concepto">
           <Key>
@@ -1859,9 +1908,9 @@
           <NavigationProperty Name="CambioMoneda" Relationship="MegaModel.FK__CambioMon__Conce__1ED998B2" FromRole="Concepto" ToRole="CambioMoneda" />
           <NavigationProperty Name="PlanContable" Relationship="MegaModel.FK__Concepto__Codigo__0DAF0CB0" FromRole="Concepto" ToRole="PlanContable" />
           <NavigationProperty Name="DepositoPrestamo" Relationship="MegaModel.FK__DepositoP__Conce__164452B1" FromRole="Concepto" ToRole="DepositoPrestamo" />
-          <NavigationProperty Name="MovimientoFondos" Relationship="MegaModel.FK__Movimient__Conce__5629CD9C" FromRole="Concepto" ToRole="MovimientoFondos" />
-          <NavigationProperty Name="ReciboCaja" Relationship="MegaModel.FK__ReciboCaj__Conce__5FB337D6" FromRole="Concepto" ToRole="ReciboCaja" />
           <NavigationProperty Name="Transferencia" Relationship="MegaModel.FK__Transfere__Conce__5F7E2DAC" FromRole="Concepto" ToRole="Transferencia" />
+          <NavigationProperty Name="MovimientoFondos" Relationship="MegaModel.FK__Movimient__Conce__11158940" FromRole="Concepto" ToRole="MovimientoFondos" />
+          <NavigationProperty Name="ReciboCaja" Relationship="MegaModel.FK__ReciboCaj__Conce__1D7B6025" FromRole="Concepto" ToRole="ReciboCaja" />
         </EntityType>
         <EntityType Name="ContratoEmpresaAfiliado">
           <Key>
@@ -1896,7 +1945,7 @@
           <NavigationProperty Name="PlanContable" Relationship="MegaModel.FK__CuentaBan__Codig__48CFD27E" FromRole="CuentaBancaria" ToRole="PlanContable" />
           <NavigationProperty Name="EntidadFinanciera" Relationship="MegaModel.FK__CuentaBan__Entid__47DBAE45" FromRole="CuentaBancaria" ToRole="EntidadFinanciera" />
           <NavigationProperty Name="Moneda" Relationship="MegaModel.FK__CuentaBan__Moned__49C3F6B7" FromRole="CuentaBancaria" ToRole="Moneda" />
-          <NavigationProperty Name="MovimientoFondos" Relationship="MegaModel.FK__Movimient__Numer__534D60F1" FromRole="CuentaBancaria" ToRole="MovimientoFondos" />
+          <NavigationProperty Name="MovimientoFondos" Relationship="MegaModel.FK__Movimient__Numer__0E391C95" FromRole="CuentaBancaria" ToRole="MovimientoFondos" />
         </EntityType>
         <EntityType Name="DenominacionMoneda">
           <Key>
@@ -1945,9 +1994,9 @@
           <Property Name="Estado" Type="Boolean" />
           <NavigationProperty Name="Asiento" Relationship="MegaModel.FK__Asiento__CodDocu__3D5E1FD2" FromRole="Documento" ToRole="Asiento" />
           <NavigationProperty Name="Comprobante" Relationship="MegaModel.FK__Documento__CodCo__31EC6D26" FromRole="Documento" ToRole="Comprobante" />
-          <NavigationProperty Name="MovimientoFondos" Relationship="MegaModel.FK__Movimient__CodDo__52593CB8" FromRole="Documento" ToRole="MovimientoFondos" />
-          <NavigationProperty Name="ReciboCaja" Relationship="MegaModel.FK__ReciboCaj__CodDo__5DCAEF64" FromRole="Documento" ToRole="ReciboCaja" />
           <NavigationProperty Name="Transferencia" Relationship="MegaModel.FK__Transfere__CodDo__5E8A0973" FromRole="Documento" ToRole="Transferencia" />
+          <NavigationProperty Name="MovimientoFondos" Relationship="MegaModel.FK__Movimient__CodDo__0D44F85C" FromRole="Documento" ToRole="MovimientoFondos" />
+          <NavigationProperty Name="ReciboCaja" Relationship="MegaModel.FK__ReciboCaj__CodDo__1B9317B3" FromRole="Documento" ToRole="ReciboCaja" />
         </EntityType>
         <EntityType Name="EmpresaAfiliada">
           <Key>
@@ -1984,43 +2033,9 @@
           <NavigationProperty Name="CuentaBancaria" Relationship="MegaModel.FK__CuentaBan__Moned__49C3F6B7" FromRole="Moneda" ToRole="CuentaBancaria" />
           <NavigationProperty Name="DenominacionMoneda" Relationship="MegaModel.FK__Denominac__Moned__29572725" FromRole="Moneda" ToRole="DenominacionMoneda" />
           <NavigationProperty Name="DepositoPrestamo" Relationship="MegaModel.FK__DepositoP__Moned__173876EA" FromRole="Moneda" ToRole="DepositoPrestamo" />
-          <NavigationProperty Name="MovimientoFondos" Relationship="MegaModel.FK__Movimient__Moned__571DF1D5" FromRole="Moneda" ToRole="MovimientoFondos" />
-          <NavigationProperty Name="ReciboCaja" Relationship="MegaModel.FK__ReciboCaj__Moned__60A75C0F" FromRole="Moneda" ToRole="ReciboCaja" />
           <NavigationProperty Name="Transferencia" Relationship="MegaModel.FK__Transfere__Moned__6B24EA82" FromRole="Moneda" ToRole="Transferencia" />
-        </EntityType>
-        <EntityType Name="MovimientoFondos">
-          <Key>
-            <PropertyRef Name="NumeroDocumento" />
-          </Key>
-          <Property Name="NumeroDocumento" Type="Int32" Nullable="false" />
-          <Property Name="CodDocumento" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
-          <Property Name="MonedaId" Type="Int32" />
-          <Property Name="Importe" Type="Decimal" Precision="10" Scale="2" />
-          <Property Name="OficinaIdProcedencia" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
-          <Property Name="OficinaIdDestino" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
-          <Property Name="CodigoPersona" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
-          <Property Name="BancoId" Type="Int32" />
-          <Property Name="NumeroCuentaBanco" Type="Int32" />
-          <Property Name="CodigoVoucher" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
-          <Property Name="NumeroOperacion" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
-          <Property Name="CajaAperturaId" Type="Int32" />
-          <Property Name="FechaHoraAnulacion" Type="DateTime" Precision="3" />
-          <Property Name="Estado" Type="Int32" />
-          <Property Name="UsuarioAnulacion" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
-          <Property Name="ConceptoId" Type="Int32" />
-          <Property Name="TipoMovimiento" Type="Int32" />
-          <Property Name="FechaHoraTransaccion" Type="DateTime" Precision="0" />
-          <Property Name="FechaHoraDescargo" Type="DateTime" Precision="0" />
-          <Property Name="FlagImpreso" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Banco" Relationship="MegaModel.FK__Movimient__Banco__5441852A" FromRole="MovimientoFondos" ToRole="Banco" />
-          <NavigationProperty Name="CajaApertura" Relationship="MegaModel.FK__Movimient__CajaA__5535A963" FromRole="MovimientoFondos" ToRole="CajaApertura" />
-          <NavigationProperty Name="Concepto" Relationship="MegaModel.FK__Movimient__Conce__5629CD9C" FromRole="MovimientoFondos" ToRole="Concepto" />
-          <NavigationProperty Name="CuentaBancaria" Relationship="MegaModel.FK__Movimient__Numer__534D60F1" FromRole="MovimientoFondos" ToRole="CuentaBancaria" />
-          <NavigationProperty Name="Documento" Relationship="MegaModel.FK__Movimient__CodDo__52593CB8" FromRole="MovimientoFondos" ToRole="Documento" />
-          <NavigationProperty Name="Moneda" Relationship="MegaModel.FK__Movimient__Moned__571DF1D5" FromRole="MovimientoFondos" ToRole="Moneda" />
-          <NavigationProperty Name="Persona" Relationship="MegaModel.FK__Movimient__Codig__5165187F" FromRole="MovimientoFondos" ToRole="Persona" />
-          <NavigationProperty Name="Oficina" Relationship="MegaModel.FK__Movimient__Ofici__4F7CD00D" FromRole="MovimientoFondos" ToRole="Oficina" />
-          <NavigationProperty Name="Oficina1" Relationship="MegaModel.FK__Movimient__Ofici__5070F446" FromRole="MovimientoFondos" ToRole="Oficina" />
+          <NavigationProperty Name="MovimientoFondos" Relationship="MegaModel.FK__Movimient__Moned__1209AD79" FromRole="Moneda" ToRole="MovimientoFondos" />
+          <NavigationProperty Name="ReciboCaja" Relationship="MegaModel.FK__ReciboCaj__Moned__1E6F845E" FromRole="Moneda" ToRole="ReciboCaja" />
         </EntityType>
         <EntityType Name="Oficina">
           <Key>
@@ -2034,12 +2049,13 @@
           <Property Name="Telefono" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
           <Property Name="Estado" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="ContratoEmpresaAfiliado" Relationship="MegaModel.FK__ContratoE__Codig__3A81B327" FromRole="Oficina" ToRole="ContratoEmpresaAfiliado" />
-          <NavigationProperty Name="MovimientoFondos" Relationship="MegaModel.FK__Movimient__Ofici__4F7CD00D" FromRole="Oficina" ToRole="MovimientoFondos" />
-          <NavigationProperty Name="MovimientoFondos1" Relationship="MegaModel.FK__Movimient__Ofici__5070F446" FromRole="Oficina" ToRole="MovimientoFondos" />
           <NavigationProperty Name="Transferencia" Relationship="MegaModel.FK__Transfere__Ofici__6166761E" FromRole="Oficina" ToRole="Transferencia" />
           <NavigationProperty Name="Transferencia1" Relationship="MegaModel.FK__Transfere__Ofici__625A9A57" FromRole="Oficina" ToRole="Transferencia" />
           <NavigationProperty Name="Serie" Relationship="MegaModel.R_84" FromRole="Oficina" ToRole="Serie" />
-        </EntityType>
+          <NavigationProperty Name="MovimientoFondos" Relationship="MegaModel.FK__Movimient__Ofici__0A688BB1" FromRole="Oficina" ToRole="MovimientoFondos" />
+          <NavigationProperty Name="MovimientoFondos1" Relationship="MegaModel.FK__Movimient__Ofici__0B5CAFEA" FromRole="Oficina" ToRole="MovimientoFondos" />
+          <NavigationProperty Name="ReciboCaja" Relationship="MegaModel.FK__ReciboCaj__Codig__1F63A897" FromRole="Oficina" ToRole="ReciboCaja" />
+          </EntityType>
         <EntityType Name="Perfil">
           <Key>
             <PropertyRef Name="PerfilId" />
@@ -2071,12 +2087,12 @@
           <NavigationProperty Name="CuentaBancaria" Relationship="MegaModel.FK__CuentaBan__Codig__46E78A0C" FromRole="Persona" ToRole="CuentaBancaria" />
           <NavigationProperty Name="DepositoPrestamo" Relationship="MegaModel.FK__DepositoP__Codig__145C0A3F" FromRole="Persona" ToRole="DepositoPrestamo" />
           <NavigationProperty Name="EmpresaAfiliada" Relationship="MegaModel.FK__EmpresaAf__Codig__34C8D9D1" FromRole="Persona" ToRole="EmpresaAfiliada" />
-          <NavigationProperty Name="MovimientoFondos" Relationship="MegaModel.FK__Movimient__Codig__5165187F" FromRole="Persona" ToRole="MovimientoFondos" />
           <NavigationProperty Name="TipoDocumentoIdentidad" Relationship="MegaModel.FK__Persona__TipoDoc__7F60ED59" FromRole="Persona" ToRole="TipoDocumentoIdentidad" />
           <NavigationProperty Name="PersonaDetalle" Relationship="MegaModel.FK__PersonaDe__Codig__21B6055D" FromRole="Persona" ToRole="PersonaDetalle" />
-          <NavigationProperty Name="ReciboCaja" Relationship="MegaModel.FK__ReciboCaj__Codig__5EBF139D" FromRole="Persona" ToRole="ReciboCaja" />
           <NavigationProperty Name="Transferencia" Relationship="MegaModel.FK__Transfere__Perso__656C112C" FromRole="Persona" ToRole="Transferencia" />
           <NavigationProperty Name="Transferencia1" Relationship="MegaModel.FK__Transfere__Perso__66603565" FromRole="Persona" ToRole="Transferencia" />
+          <NavigationProperty Name="MovimientoFondos" Relationship="MegaModel.FK__Movimient__Codig__0C50D423" FromRole="Persona" ToRole="MovimientoFondos" />
+          <NavigationProperty Name="ReciboCaja" Relationship="MegaModel.FK__ReciboCaj__Codig__1C873BEC" FromRole="Persona" ToRole="ReciboCaja" />
         </EntityType>
         <EntityType Name="PersonaDetalle">
           <Key>
@@ -2104,33 +2120,6 @@
           <NavigationProperty Name="Caja" Relationship="MegaModel.FK__Caja__CodigoCuen__0425A276" FromRole="PlanContable" ToRole="Caja" />
           <NavigationProperty Name="Concepto" Relationship="MegaModel.FK__Concepto__Codigo__0DAF0CB0" FromRole="PlanContable" ToRole="Concepto" />
           <NavigationProperty Name="CuentaBancaria" Relationship="MegaModel.FK__CuentaBan__Codig__48CFD27E" FromRole="PlanContable" ToRole="CuentaBancaria" />
-        </EntityType>
-        <EntityType Name="ReciboCaja">
-          <Key>
-            <PropertyRef Name="NumeroDocumento" />
-          </Key>
-          <Property Name="NumeroDocumento" Type="Int32" Nullable="false" />
-          <Property Name="CajaAperturaId" Type="Int32" />
-          <Property Name="CodDocumento" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
-          <Property Name="TipoRecibo" Type="Int32" />
-          <Property Name="MonedaId" Type="Int32" />
-          <Property Name="Importe" Type="Decimal" Precision="10" Scale="2" />
-          <Property Name="FechaHoraTransaccion" Type="DateTime" Precision="0" />
-          <Property Name="CodigoPersona" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
-          <Property Name="Concepto" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
-          <Property Name="FlagImpreso" Type="Boolean" />
-          <Property Name="ObsRecibo" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
-          <Property Name="FechaHoraAnulacion" Type="DateTime" Precision="0" />
-          <Property Name="UsuarioAnulacion" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
-          <Property Name="ComprobanteCompraId" Type="Int32" />
-          <Property Name="Estado" Type="Int32" />
-          <Property Name="ConceptoId" Type="Int32" />
-          <NavigationProperty Name="CajaApertura" Relationship="MegaModel.FK__ReciboCaj__CajaA__5BE2A6F2" FromRole="ReciboCaja" ToRole="CajaApertura" />
-          <NavigationProperty Name="ComprobanteCompra" Relationship="MegaModel.FK__ReciboCaj__Compr__5CD6CB2B" FromRole="ReciboCaja" ToRole="ComprobanteCompra" />
-          <NavigationProperty Name="Concepto1" Relationship="MegaModel.FK__ReciboCaj__Conce__5FB337D6" FromRole="ReciboCaja" ToRole="Concepto" />
-          <NavigationProperty Name="Documento" Relationship="MegaModel.FK__ReciboCaj__CodDo__5DCAEF64" FromRole="ReciboCaja" ToRole="Documento" />
-          <NavigationProperty Name="Moneda" Relationship="MegaModel.FK__ReciboCaj__Moned__60A75C0F" FromRole="ReciboCaja" ToRole="Moneda" />
-          <NavigationProperty Name="Persona" Relationship="MegaModel.FK__ReciboCaj__Codig__5EBF139D" FromRole="ReciboCaja" ToRole="Persona" />
         </EntityType>
         <EntityType Name="Serie">
           <Key>
@@ -2338,18 +2327,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Movimient__Banco__5441852A">
-          <End Role="Banco" Type="MegaModel.Banco" Multiplicity="0..1" />
-          <End Role="MovimientoFondos" Type="MegaModel.MovimientoFondos" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Banco">
-              <PropertyRef Name="BancoId" />
-            </Principal>
-            <Dependent Role="MovimientoFondos">
-              <PropertyRef Name="BancoId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__Transfere__Banco__68487DD7">
           <End Role="Banco" Type="MegaModel.Banco" Multiplicity="0..1" />
           <End Role="Transferencia" Type="MegaModel.Transferencia" Multiplicity="*" />
@@ -2430,30 +2407,6 @@
               <PropertyRef Name="CajaAperturaId" />
             </Principal>
             <Dependent Role="DepositoPrestamo">
-              <PropertyRef Name="CajaAperturaId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Movimient__CajaA__5535A963">
-          <End Role="CajaApertura" Type="MegaModel.CajaApertura" Multiplicity="0..1" />
-          <End Role="MovimientoFondos" Type="MegaModel.MovimientoFondos" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CajaApertura">
-              <PropertyRef Name="CajaAperturaId" />
-            </Principal>
-            <Dependent Role="MovimientoFondos">
-              <PropertyRef Name="CajaAperturaId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__ReciboCaj__CajaA__5BE2A6F2">
-          <End Role="CajaApertura" Type="MegaModel.CajaApertura" Multiplicity="0..1" />
-          <End Role="ReciboCaja" Type="MegaModel.ReciboCaja" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CajaApertura">
-              <PropertyRef Name="CajaAperturaId" />
-            </Principal>
-            <Dependent Role="ReciboCaja">
               <PropertyRef Name="CajaAperturaId" />
             </Dependent>
           </ReferentialConstraint>
@@ -2542,18 +2495,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ReciboCaj__Compr__5CD6CB2B">
-          <End Role="ComprobanteCompra" Type="MegaModel.ComprobanteCompra" Multiplicity="0..1" />
-          <End Role="ReciboCaja" Type="MegaModel.ReciboCaja" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ComprobanteCompra">
-              <PropertyRef Name="ComprobanteCompraId" />
-            </Principal>
-            <Dependent Role="ReciboCaja">
-              <PropertyRef Name="ComprobanteCompraId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__Concepto__Codigo__0DAF0CB0">
           <End Role="PlanContable" Type="MegaModel.PlanContable" Multiplicity="0..1" />
           <End Role="Concepto" Type="MegaModel.Concepto" Multiplicity="*" />
@@ -2574,30 +2515,6 @@
               <PropertyRef Name="ConceptoId" />
             </Principal>
             <Dependent Role="DepositoPrestamo">
-              <PropertyRef Name="ConceptoId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Movimient__Conce__5629CD9C">
-          <End Role="Concepto" Type="MegaModel.Concepto" Multiplicity="0..1" />
-          <End Role="MovimientoFondos" Type="MegaModel.MovimientoFondos" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Concepto">
-              <PropertyRef Name="ConceptoId" />
-            </Principal>
-            <Dependent Role="MovimientoFondos">
-              <PropertyRef Name="ConceptoId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__ReciboCaj__Conce__5FB337D6">
-          <End Role="Concepto" Type="MegaModel.Concepto" Multiplicity="0..1" />
-          <End Role="ReciboCaja" Type="MegaModel.ReciboCaja" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Concepto">
-              <PropertyRef Name="ConceptoId" />
-            </Principal>
-            <Dependent Role="ReciboCaja">
               <PropertyRef Name="ConceptoId" />
             </Dependent>
           </ReferentialConstraint>
@@ -2686,18 +2603,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Movimient__Numer__534D60F1">
-          <End Role="CuentaBancaria" Type="MegaModel.CuentaBancaria" Multiplicity="0..1" />
-          <End Role="MovimientoFondos" Type="MegaModel.MovimientoFondos" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CuentaBancaria">
-              <PropertyRef Name="NumeroCuentaBanco" />
-            </Principal>
-            <Dependent Role="MovimientoFondos">
-              <PropertyRef Name="NumeroCuentaBanco" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__Denominac__Moned__29572725">
           <End Role="Moneda" Type="MegaModel.Moneda" Multiplicity="0..1" />
           <End Role="DenominacionMoneda" Type="MegaModel.DenominacionMoneda" Multiplicity="*" />
@@ -2746,30 +2651,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Movimient__CodDo__52593CB8">
-          <End Role="Documento" Type="MegaModel.Documento" Multiplicity="0..1" />
-          <End Role="MovimientoFondos" Type="MegaModel.MovimientoFondos" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Documento">
-              <PropertyRef Name="CodDocumento" />
-            </Principal>
-            <Dependent Role="MovimientoFondos">
-              <PropertyRef Name="CodDocumento" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__ReciboCaj__CodDo__5DCAEF64">
-          <End Role="Documento" Type="MegaModel.Documento" Multiplicity="0..1" />
-          <End Role="ReciboCaja" Type="MegaModel.ReciboCaja" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Documento">
-              <PropertyRef Name="CodDocumento" />
-            </Principal>
-            <Dependent Role="ReciboCaja">
-              <PropertyRef Name="CodDocumento" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__Transfere__CodDo__5E8A0973">
           <End Role="Documento" Type="MegaModel.Documento" Multiplicity="1" />
           <End Role="Transferencia" Type="MegaModel.Transferencia" Multiplicity="*" />
@@ -2794,30 +2675,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Movimient__Moned__571DF1D5">
-          <End Role="Moneda" Type="MegaModel.Moneda" Multiplicity="0..1" />
-          <End Role="MovimientoFondos" Type="MegaModel.MovimientoFondos" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Moneda">
-              <PropertyRef Name="MonedaId" />
-            </Principal>
-            <Dependent Role="MovimientoFondos">
-              <PropertyRef Name="MonedaId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__ReciboCaj__Moned__60A75C0F">
-          <End Role="Moneda" Type="MegaModel.Moneda" Multiplicity="0..1" />
-          <End Role="ReciboCaja" Type="MegaModel.ReciboCaja" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Moneda">
-              <PropertyRef Name="MonedaId" />
-            </Principal>
-            <Dependent Role="ReciboCaja">
-              <PropertyRef Name="MonedaId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__Transfere__Moned__6B24EA82">
           <End Role="Moneda" Type="MegaModel.Moneda" Multiplicity="1" />
           <End Role="Transferencia" Type="MegaModel.Transferencia" Multiplicity="*" />
@@ -2827,42 +2684,6 @@
             </Principal>
             <Dependent Role="Transferencia">
               <PropertyRef Name="MonedaId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Movimient__Codig__5165187F">
-          <End Role="Persona" Type="MegaModel.Persona" Multiplicity="0..1" />
-          <End Role="MovimientoFondos" Type="MegaModel.MovimientoFondos" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Persona">
-              <PropertyRef Name="CodigoPersona" />
-            </Principal>
-            <Dependent Role="MovimientoFondos">
-              <PropertyRef Name="CodigoPersona" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Movimient__Ofici__4F7CD00D">
-          <End Role="Oficina" Type="MegaModel.Oficina" Multiplicity="0..1" />
-          <End Role="MovimientoFondos" Type="MegaModel.MovimientoFondos" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Oficina">
-              <PropertyRef Name="CodigoOficina" />
-            </Principal>
-            <Dependent Role="MovimientoFondos">
-              <PropertyRef Name="OficinaIdProcedencia" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Movimient__Ofici__5070F446">
-          <End Role="Oficina" Type="MegaModel.Oficina" Multiplicity="0..1" />
-          <End Role="MovimientoFondos" Type="MegaModel.MovimientoFondos" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Oficina">
-              <PropertyRef Name="CodigoOficina" />
-            </Principal>
-            <Dependent Role="MovimientoFondos">
-              <PropertyRef Name="OficinaIdDestino" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -2926,18 +2747,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ReciboCaj__Codig__5EBF139D">
-          <End Role="Persona" Type="MegaModel.Persona" Multiplicity="0..1" />
-          <End Role="ReciboCaja" Type="MegaModel.ReciboCaja" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Persona">
-              <PropertyRef Name="CodigoPersona" />
-            </Principal>
-            <Dependent Role="ReciboCaja">
-              <PropertyRef Name="CodigoPersona" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__Transfere__Perso__656C112C">
           <End Role="Persona" Type="MegaModel.Persona" Multiplicity="1" />
           <End Role="Transferencia" Type="MegaModel.Transferencia" Multiplicity="*" />
@@ -2962,7 +2771,292 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        <EntityType Name="MovimientoFondos">
+          <Key>
+            <PropertyRef Name="MovimientoFondosId" />
+          </Key>
+          <Property Type="Int32" Name="MovimientoFondosId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="NumeroDocumento" />
+          <Property Type="String" Name="CodDocumento" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Importe" Precision="10" Scale="2" />
+          <Property Type="String" Name="OficinaIdProcedencia" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OficinaIdDestino" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CodigoPersona" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="BancoId" />
+          <Property Type="Int32" Name="NumeroCuentaBanco" />
+          <Property Type="String" Name="CodigoVoucher" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NumeroOperacion" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="CajaAperturaId" />
+          <Property Type="DateTime" Name="FechaHoraAnulacion" Precision="3" />
+          <Property Type="Int32" Name="Estado" />
+          <Property Type="String" Name="UsuarioAnulacion" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ConceptoId" />
+          <Property Type="Int32" Name="MonedaId" />
+          <Property Type="Int32" Name="TipoMovimiento" />
+          <Property Type="DateTime" Name="FechaHoraTransaccion" Precision="0" />
+          <Property Type="String" Name="CodDocumentoDescargo" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="NroDocumentoDescargo" />
+          <Property Type="DateTime" Name="FechaHoraDescargo" Precision="0" />
+          <Property Type="Boolean" Name="FlagImpreso" Nullable="false" />
+          <Property Type="String" Name="Observacion" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Banco" Relationship="MegaModel.FK__Movimient__Banco__0F2D40CE" FromRole="MovimientoFondos" ToRole="Banco" />
+          <NavigationProperty Name="CajaApertura" Relationship="MegaModel.FK__Movimient__CajaA__10216507" FromRole="MovimientoFondos" ToRole="CajaApertura" />
+          <NavigationProperty Name="Concepto" Relationship="MegaModel.FK__Movimient__Conce__11158940" FromRole="MovimientoFondos" ToRole="Concepto" />
+          <NavigationProperty Name="CuentaBancaria" Relationship="MegaModel.FK__Movimient__Numer__0E391C95" FromRole="MovimientoFondos" ToRole="CuentaBancaria" />
+          <NavigationProperty Name="Documento" Relationship="MegaModel.FK__Movimient__CodDo__0D44F85C" FromRole="MovimientoFondos" ToRole="Documento" />
+          <NavigationProperty Name="Moneda" Relationship="MegaModel.FK__Movimient__Moned__1209AD79" FromRole="MovimientoFondos" ToRole="Moneda" />
+          <NavigationProperty Name="Persona" Relationship="MegaModel.FK__Movimient__Codig__0C50D423" FromRole="MovimientoFondos" ToRole="Persona" />
+          <NavigationProperty Name="Oficina" Relationship="MegaModel.FK__Movimient__Ofici__0A688BB1" FromRole="MovimientoFondos" ToRole="Oficina" />
+          <NavigationProperty Name="Oficina1" Relationship="MegaModel.FK__Movimient__Ofici__0B5CAFEA" FromRole="MovimientoFondos" ToRole="Oficina" />
+          <NavigationProperty Name="ReciboCaja" Relationship="MegaModel.FK__ReciboCaj__Movim__2057CCD0" FromRole="MovimientoFondos" ToRole="ReciboCaja" />
+        </EntityType>
+        <EntityType Name="ReciboCaja">
+          <Key>
+            <PropertyRef Name="ReciboCajaId" />
+          </Key>
+          <Property Type="Int32" Name="ReciboCajaId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="NumeroDocumento" />
+          <Property Type="Int32" Name="CajaAperturaId" />
+          <Property Type="String" Name="CodDocumento" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="TipoRecibo" />
+          <Property Type="Int32" Name="MonedaId" />
+          <Property Type="Decimal" Name="Importe" Precision="10" Scale="2" />
+          <Property Type="DateTime" Name="FechaHoraTransaccion" Precision="0" />
+          <Property Type="String" Name="CodigoPersona" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Concepto" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="FlagImpreso" />
+          <Property Type="String" Name="ObsRecibo" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaHoraAnulacion" Precision="0" />
+          <Property Type="String" Name="UsuarioAnulacion" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ComprobanteCompraId" />
+          <Property Type="Int32" Name="Estado" />
+          <Property Type="Int32" Name="ConceptoId" />
+          <Property Type="String" Name="CodigoOficinaProcedencia" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="MovimientoFondosId" />
+          <NavigationProperty Name="CajaApertura" Relationship="MegaModel.FK__ReciboCaj__CajaA__19AACF41" FromRole="ReciboCaja" ToRole="CajaApertura" />
+          <NavigationProperty Name="ComprobanteCompra" Relationship="MegaModel.FK__ReciboCaj__Compr__1A9EF37A" FromRole="ReciboCaja" ToRole="ComprobanteCompra" />
+          <NavigationProperty Name="Concepto1" Relationship="MegaModel.FK__ReciboCaj__Conce__1D7B6025" FromRole="ReciboCaja" ToRole="Concepto" />
+          <NavigationProperty Name="Documento" Relationship="MegaModel.FK__ReciboCaj__CodDo__1B9317B3" FromRole="ReciboCaja" ToRole="Documento" />
+          <NavigationProperty Name="Moneda" Relationship="MegaModel.FK__ReciboCaj__Moned__1E6F845E" FromRole="ReciboCaja" ToRole="Moneda" />
+          <NavigationProperty Name="MovimientoFondos" Relationship="MegaModel.FK__ReciboCaj__Movim__2057CCD0" FromRole="ReciboCaja" ToRole="MovimientoFondos" />
+          <NavigationProperty Name="Oficina" Relationship="MegaModel.FK__ReciboCaj__Codig__1F63A897" FromRole="ReciboCaja" ToRole="Oficina" />
+          <NavigationProperty Name="Persona" Relationship="MegaModel.FK__ReciboCaj__Codig__1C873BEC" FromRole="ReciboCaja" ToRole="Persona" />
+        </EntityType>
+        <Association Name="FK__Movimient__Banco__0F2D40CE">
+          <End Type="MegaModel.Banco" Role="Banco" Multiplicity="0..1" />
+          <End Type="MegaModel.MovimientoFondos" Role="MovimientoFondos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Banco">
+              <PropertyRef Name="BancoId" />
+            </Principal>
+            <Dependent Role="MovimientoFondos">
+              <PropertyRef Name="BancoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Movimient__CajaA__10216507">
+          <End Type="MegaModel.CajaApertura" Role="CajaApertura" Multiplicity="0..1" />
+          <End Type="MegaModel.MovimientoFondos" Role="MovimientoFondos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CajaApertura">
+              <PropertyRef Name="CajaAperturaId" />
+            </Principal>
+            <Dependent Role="MovimientoFondos">
+              <PropertyRef Name="CajaAperturaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ReciboCaj__CajaA__19AACF41">
+          <End Type="MegaModel.CajaApertura" Role="CajaApertura" Multiplicity="0..1" />
+          <End Type="MegaModel.ReciboCaja" Role="ReciboCaja" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CajaApertura">
+              <PropertyRef Name="CajaAperturaId" />
+            </Principal>
+            <Dependent Role="ReciboCaja">
+              <PropertyRef Name="CajaAperturaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ReciboCaj__Compr__1A9EF37A">
+          <End Type="MegaModel.ComprobanteCompra" Role="ComprobanteCompra" Multiplicity="0..1" />
+          <End Type="MegaModel.ReciboCaja" Role="ReciboCaja" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ComprobanteCompra">
+              <PropertyRef Name="ComprobanteCompraId" />
+            </Principal>
+            <Dependent Role="ReciboCaja">
+              <PropertyRef Name="ComprobanteCompraId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Movimient__Conce__11158940">
+          <End Type="MegaModel.Concepto" Role="Concepto" Multiplicity="0..1" />
+          <End Type="MegaModel.MovimientoFondos" Role="MovimientoFondos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Concepto">
+              <PropertyRef Name="ConceptoId" />
+            </Principal>
+            <Dependent Role="MovimientoFondos">
+              <PropertyRef Name="ConceptoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ReciboCaj__Conce__1D7B6025">
+          <End Type="MegaModel.Concepto" Role="Concepto" Multiplicity="0..1" />
+          <End Type="MegaModel.ReciboCaja" Role="ReciboCaja" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Concepto">
+              <PropertyRef Name="ConceptoId" />
+            </Principal>
+            <Dependent Role="ReciboCaja">
+              <PropertyRef Name="ConceptoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Movimient__Numer__0E391C95">
+          <End Type="MegaModel.CuentaBancaria" Role="CuentaBancaria" Multiplicity="0..1" />
+          <End Type="MegaModel.MovimientoFondos" Role="MovimientoFondos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CuentaBancaria">
+              <PropertyRef Name="NumeroCuentaBanco" />
+            </Principal>
+            <Dependent Role="MovimientoFondos">
+              <PropertyRef Name="NumeroCuentaBanco" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Movimient__CodDo__0D44F85C">
+          <End Type="MegaModel.Documento" Role="Documento" Multiplicity="0..1" />
+          <End Type="MegaModel.MovimientoFondos" Role="MovimientoFondos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Documento">
+              <PropertyRef Name="CodDocumento" />
+            </Principal>
+            <Dependent Role="MovimientoFondos">
+              <PropertyRef Name="CodDocumento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ReciboCaj__CodDo__1B9317B3">
+          <End Type="MegaModel.Documento" Role="Documento" Multiplicity="0..1" />
+          <End Type="MegaModel.ReciboCaja" Role="ReciboCaja" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Documento">
+              <PropertyRef Name="CodDocumento" />
+            </Principal>
+            <Dependent Role="ReciboCaja">
+              <PropertyRef Name="CodDocumento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Movimient__Moned__1209AD79">
+          <End Type="MegaModel.Moneda" Role="Moneda" Multiplicity="0..1" />
+          <End Type="MegaModel.MovimientoFondos" Role="MovimientoFondos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Moneda">
+              <PropertyRef Name="MonedaId" />
+            </Principal>
+            <Dependent Role="MovimientoFondos">
+              <PropertyRef Name="MonedaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ReciboCaj__Moned__1E6F845E">
+          <End Type="MegaModel.Moneda" Role="Moneda" Multiplicity="0..1" />
+          <End Type="MegaModel.ReciboCaja" Role="ReciboCaja" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Moneda">
+              <PropertyRef Name="MonedaId" />
+            </Principal>
+            <Dependent Role="ReciboCaja">
+              <PropertyRef Name="MonedaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Movimient__Codig__0C50D423">
+          <End Type="MegaModel.Persona" Role="Persona" Multiplicity="0..1" />
+          <End Type="MegaModel.MovimientoFondos" Role="MovimientoFondos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Persona">
+              <PropertyRef Name="CodigoPersona" />
+            </Principal>
+            <Dependent Role="MovimientoFondos">
+              <PropertyRef Name="CodigoPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Movimient__Ofici__0A688BB1">
+          <End Type="MegaModel.Oficina" Role="Oficina" Multiplicity="0..1" />
+          <End Type="MegaModel.MovimientoFondos" Role="MovimientoFondos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Oficina">
+              <PropertyRef Name="CodigoOficina" />
+            </Principal>
+            <Dependent Role="MovimientoFondos">
+              <PropertyRef Name="OficinaIdProcedencia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Movimient__Ofici__0B5CAFEA">
+          <End Type="MegaModel.Oficina" Role="Oficina" Multiplicity="0..1" />
+          <End Type="MegaModel.MovimientoFondos" Role="MovimientoFondos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Oficina">
+              <PropertyRef Name="CodigoOficina" />
+            </Principal>
+            <Dependent Role="MovimientoFondos">
+              <PropertyRef Name="OficinaIdDestino" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ReciboCaj__Movim__2057CCD0">
+          <End Type="MegaModel.MovimientoFondos" Role="MovimientoFondos" Multiplicity="0..1" />
+          <End Type="MegaModel.ReciboCaja" Role="ReciboCaja" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MovimientoFondos">
+              <PropertyRef Name="MovimientoFondosId" />
+            </Principal>
+            <Dependent Role="ReciboCaja">
+              <PropertyRef Name="MovimientoFondosId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ReciboCaj__Codig__1F63A897">
+          <End Type="MegaModel.Oficina" Role="Oficina" Multiplicity="0..1" />
+          <End Type="MegaModel.ReciboCaja" Role="ReciboCaja" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Oficina">
+              <PropertyRef Name="CodigoOficina" />
+            </Principal>
+            <Dependent Role="ReciboCaja">
+              <PropertyRef Name="CodigoOficinaProcedencia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ReciboCaj__Codig__1C873BEC">
+          <End Type="MegaModel.Persona" Role="Persona" Multiplicity="0..1" />
+          <End Type="MegaModel.ReciboCaja" Role="ReciboCaja" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Persona">
+              <PropertyRef Name="CodigoPersona" />
+            </Principal>
+            <Dependent Role="ReciboCaja">
+              <PropertyRef Name="CodigoPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="spSearchMovFondos_Result">
+          <Property Type="Int32" Name="MovimientoFondosId" Nullable="false" />
+          <Property Type="String" Name="CodDocumento" Nullable="true" MaxLength="6" />
+          <Property Type="Int32" Name="NumeroDocumento" Nullable="true" />
+          <Property Type="String" Name="OficinaIdProcedencia" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="OficinaIdDestino" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="NombrePersona" Nullable="true" MaxLength="203" />
+          <Property Type="String" Name="NombreEntidad" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="DirEntidad" Nullable="true" MaxLength="60" />
+        </ComplexType>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -3205,32 +3299,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="MovimientoFondos">
-            <EntityTypeMapping TypeName="MegaModel.MovimientoFondos">
-              <MappingFragment StoreEntitySet="MovimientoFondos">
-                <ScalarProperty Name="NumeroDocumento" ColumnName="NumeroDocumento" />
-                <ScalarProperty Name="CodDocumento" ColumnName="CodDocumento" />
-                <ScalarProperty Name="MonedaId" ColumnName="MonedaId" />
-                <ScalarProperty Name="Importe" ColumnName="Importe" />
-                <ScalarProperty Name="OficinaIdProcedencia" ColumnName="OficinaIdProcedencia" />
-                <ScalarProperty Name="OficinaIdDestino" ColumnName="OficinaIdDestino" />
-                <ScalarProperty Name="CodigoPersona" ColumnName="CodigoPersona" />
-                <ScalarProperty Name="BancoId" ColumnName="BancoId" />
-                <ScalarProperty Name="NumeroCuentaBanco" ColumnName="NumeroCuentaBanco" />
-                <ScalarProperty Name="CodigoVoucher" ColumnName="CodigoVoucher" />
-                <ScalarProperty Name="NumeroOperacion" ColumnName="NumeroOperacion" />
-                <ScalarProperty Name="CajaAperturaId" ColumnName="CajaAperturaId" />
-                <ScalarProperty Name="FechaHoraAnulacion" ColumnName="FechaHoraAnulacion" />
-                <ScalarProperty Name="Estado" ColumnName="Estado" />
-                <ScalarProperty Name="UsuarioAnulacion" ColumnName="UsuarioAnulacion" />
-                <ScalarProperty Name="ConceptoId" ColumnName="ConceptoId" />
-                <ScalarProperty Name="TipoMovimiento" ColumnName="TipoMovimiento" />
-                <ScalarProperty Name="FechaHoraTransaccion" ColumnName="FechaHoraTransaccion" />
-                <ScalarProperty Name="FechaHoraDescargo" ColumnName="FechaHoraDescargo" />
-                <ScalarProperty Name="FlagImpreso" ColumnName="FlagImpreso" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Oficina">
             <EntityTypeMapping TypeName="MegaModel.Oficina">
               <MappingFragment StoreEntitySet="Oficina">
@@ -3296,28 +3364,6 @@
                 <ScalarProperty Name="Estructura" ColumnName="Estructura" />
                 <ScalarProperty Name="Nivel" ColumnName="Nivel" />
                 <ScalarProperty Name="CodigoCuentaPadre" ColumnName="CodigoCuentaPadre" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ReciboCaja">
-            <EntityTypeMapping TypeName="MegaModel.ReciboCaja">
-              <MappingFragment StoreEntitySet="ReciboCaja">
-                <ScalarProperty Name="NumeroDocumento" ColumnName="NumeroDocumento" />
-                <ScalarProperty Name="CajaAperturaId" ColumnName="CajaAperturaId" />
-                <ScalarProperty Name="CodDocumento" ColumnName="CodDocumento" />
-                <ScalarProperty Name="TipoRecibo" ColumnName="TipoRecibo" />
-                <ScalarProperty Name="MonedaId" ColumnName="MonedaId" />
-                <ScalarProperty Name="Importe" ColumnName="Importe" />
-                <ScalarProperty Name="FechaHoraTransaccion" ColumnName="FechaHoraTransaccion" />
-                <ScalarProperty Name="CodigoPersona" ColumnName="CodigoPersona" />
-                <ScalarProperty Name="Concepto" ColumnName="Concepto" />
-                <ScalarProperty Name="FlagImpreso" ColumnName="FlagImpreso" />
-                <ScalarProperty Name="ObsRecibo" ColumnName="ObsRecibo" />
-                <ScalarProperty Name="FechaHoraAnulacion" ColumnName="FechaHoraAnulacion" />
-                <ScalarProperty Name="UsuarioAnulacion" ColumnName="UsuarioAnulacion" />
-                <ScalarProperty Name="ComprobanteCompraId" ColumnName="ComprobanteCompraId" />
-                <ScalarProperty Name="Estado" ColumnName="Estado" />
-                <ScalarProperty Name="ConceptoId" ColumnName="ConceptoId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -3422,6 +3468,75 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="MovimientoFondos">
+            <EntityTypeMapping TypeName="MegaModel.MovimientoFondos">
+              <MappingFragment StoreEntitySet="MovimientoFondos">
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+                <ScalarProperty Name="FlagImpreso" ColumnName="FlagImpreso" />
+                <ScalarProperty Name="FechaHoraDescargo" ColumnName="FechaHoraDescargo" />
+                <ScalarProperty Name="NroDocumentoDescargo" ColumnName="NroDocumentoDescargo" />
+                <ScalarProperty Name="CodDocumentoDescargo" ColumnName="CodDocumentoDescargo" />
+                <ScalarProperty Name="FechaHoraTransaccion" ColumnName="FechaHoraTransaccion" />
+                <ScalarProperty Name="TipoMovimiento" ColumnName="TipoMovimiento" />
+                <ScalarProperty Name="MonedaId" ColumnName="MonedaId" />
+                <ScalarProperty Name="ConceptoId" ColumnName="ConceptoId" />
+                <ScalarProperty Name="UsuarioAnulacion" ColumnName="UsuarioAnulacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaHoraAnulacion" ColumnName="FechaHoraAnulacion" />
+                <ScalarProperty Name="CajaAperturaId" ColumnName="CajaAperturaId" />
+                <ScalarProperty Name="NumeroOperacion" ColumnName="NumeroOperacion" />
+                <ScalarProperty Name="CodigoVoucher" ColumnName="CodigoVoucher" />
+                <ScalarProperty Name="NumeroCuentaBanco" ColumnName="NumeroCuentaBanco" />
+                <ScalarProperty Name="BancoId" ColumnName="BancoId" />
+                <ScalarProperty Name="CodigoPersona" ColumnName="CodigoPersona" />
+                <ScalarProperty Name="OficinaIdDestino" ColumnName="OficinaIdDestino" />
+                <ScalarProperty Name="OficinaIdProcedencia" ColumnName="OficinaIdProcedencia" />
+                <ScalarProperty Name="Importe" ColumnName="Importe" />
+                <ScalarProperty Name="CodDocumento" ColumnName="CodDocumento" />
+                <ScalarProperty Name="NumeroDocumento" ColumnName="NumeroDocumento" />
+                <ScalarProperty Name="MovimientoFondosId" ColumnName="MovimientoFondosId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReciboCaja">
+            <EntityTypeMapping TypeName="MegaModel.ReciboCaja">
+              <MappingFragment StoreEntitySet="ReciboCaja">
+                <ScalarProperty Name="MovimientoFondosId" ColumnName="MovimientoFondosId" />
+                <ScalarProperty Name="CodigoOficinaProcedencia" ColumnName="CodigoOficinaProcedencia" />
+                <ScalarProperty Name="ConceptoId" ColumnName="ConceptoId" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="ComprobanteCompraId" ColumnName="ComprobanteCompraId" />
+                <ScalarProperty Name="UsuarioAnulacion" ColumnName="UsuarioAnulacion" />
+                <ScalarProperty Name="FechaHoraAnulacion" ColumnName="FechaHoraAnulacion" />
+                <ScalarProperty Name="ObsRecibo" ColumnName="ObsRecibo" />
+                <ScalarProperty Name="FlagImpreso" ColumnName="FlagImpreso" />
+                <ScalarProperty Name="Concepto" ColumnName="Concepto" />
+                <ScalarProperty Name="CodigoPersona" ColumnName="CodigoPersona" />
+                <ScalarProperty Name="FechaHoraTransaccion" ColumnName="FechaHoraTransaccion" />
+                <ScalarProperty Name="Importe" ColumnName="Importe" />
+                <ScalarProperty Name="MonedaId" ColumnName="MonedaId" />
+                <ScalarProperty Name="TipoRecibo" ColumnName="TipoRecibo" />
+                <ScalarProperty Name="CodDocumento" ColumnName="CodDocumento" />
+                <ScalarProperty Name="CajaAperturaId" ColumnName="CajaAperturaId" />
+                <ScalarProperty Name="NumeroDocumento" ColumnName="NumeroDocumento" />
+                <ScalarProperty Name="ReciboCajaId" ColumnName="ReciboCajaId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="spSearchMovFondos" FunctionName="MegaModel.Store.spSearchMovFondos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="MegaModel.spSearchMovFondos_Result">
+                <ScalarProperty Name="MovimientoFondosId" ColumnName="MovimientoFondosId" />
+                <ScalarProperty Name="CodDocumento" ColumnName="CodDocumento" />
+                <ScalarProperty Name="NumeroDocumento" ColumnName="NumeroDocumento" />
+                <ScalarProperty Name="OficinaIdProcedencia" ColumnName="OficinaIdProcedencia" />
+                <ScalarProperty Name="OficinaIdDestino" ColumnName="OficinaIdDestino" />
+                <ScalarProperty Name="NombrePersona" ColumnName="NombrePersona" />
+                <ScalarProperty Name="NombreEntidad" ColumnName="NombreEntidad" />
+                <ScalarProperty Name="DirEntidad" ColumnName="DirEntidad" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

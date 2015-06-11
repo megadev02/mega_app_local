@@ -14,7 +14,8 @@ namespace Mega.Data
     
     public partial class ReciboCaja
     {
-        public int NumeroDocumento { get; set; }
+        public int ReciboCajaId { get; set; }
+        public Nullable<int> NumeroDocumento { get; set; }
         public Nullable<int> CajaAperturaId { get; set; }
         public string CodDocumento { get; set; }
         public Nullable<int> TipoRecibo { get; set; }
@@ -30,12 +31,16 @@ namespace Mega.Data
         public Nullable<int> ComprobanteCompraId { get; set; }
         public Nullable<int> Estado { get; set; }
         public Nullable<int> ConceptoId { get; set; }
+        public string CodigoOficinaProcedencia { get; set; }
+        public Nullable<int> MovimientoFondosId { get; set; }
     
         public virtual CajaApertura CajaApertura { get; set; }
         public virtual ComprobanteCompra ComprobanteCompra { get; set; }
         public virtual Concepto Concepto1 { get; set; }
         public virtual Documento Documento { get; set; }
         public virtual Moneda Moneda { get; set; }
+        public virtual MovimientoFondos MovimientoFondos { get; set; }
+        public virtual Oficina Oficina { get; set; }
         public virtual Persona Persona { get; set; }
     }
 }
