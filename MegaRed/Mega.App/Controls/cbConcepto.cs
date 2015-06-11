@@ -1,46 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using Mega.Logic;
 
 namespace Mega.App.Controls
 {
-    public partial class cbOficina : DevExpress.XtraEditors.LookUpEdit
-    {        
-
-        public cbOficina()
+    public partial class cbConcepto : DevExpress.XtraEditors.LookUpEdit
+    {
+        public cbConcepto()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
 
-        protected override void OnPaint(PaintEventArgs pe)
+        public cbConcepto(IContainer container)
         {
-            base.OnPaint(pe);
-        }        
+            container.Add(this);
 
+            InitializeComponent();
+        }
         void Init()
         {
             this.Properties.Columns.Clear();
-            this.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "CodigoOficina", Visible = false });
-            this.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "NombreOficina", Visible = true });            
+            this.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "ConceptoId", Visible = false });
+            this.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "Nombre", Visible = true });            
+          
             this.Properties.ShowHeader = false;
             this.Properties.ShowFooter = false;
-            this.Properties.NullText = "Seleccionar";            
+            this.Properties.NullText = "Seleccionar";
         }
 
         public void Bind()
         {
             Init();
-            this.Properties.DataSource = new OficinaLogic().GetAll().Where(x => x.CodigoOficina != CUtil.MiBase).ToList();
-            this.Properties.ValueMember = "CodigoOficina";
-            this.Properties.DisplayMember = "NombreOficina";
-        }        
+            this.Properties.DataSource = new ConceptoLogic();
+            this.Properties.ValueMember = "ConceptoId";
+            this.Properties.DisplayMember = "Nombre";
+        }
 
         protected override void OnEnter(EventArgs e)
         {

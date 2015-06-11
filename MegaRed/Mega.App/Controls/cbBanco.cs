@@ -1,47 +1,52 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using Mega.Logic;
 
 namespace Mega.App.Controls
 {
-    public partial class cbOficina : DevExpress.XtraEditors.LookUpEdit
-    {        
-
-        public cbOficina()
+    public partial class cbBanco : DevExpress.XtraEditors.LookUpEdit
+    {
+        public cbBanco()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
 
-        protected override void OnPaint(PaintEventArgs pe)
+        public cbBanco(IContainer container)
         {
-            base.OnPaint(pe);
-        }        
+            container.Add(this);
 
+            InitializeComponent();
+        }
+       
         void Init()
         {
             this.Properties.Columns.Clear();
-            this.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "CodigoOficina", Visible = false });
-            this.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "NombreOficina", Visible = true });            
-            this.Properties.ShowHeader = false;
-            this.Properties.ShowFooter = false;
-            this.Properties.NullText = "Seleccionar";            
+            this.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "BancoId", Visible = false });            
+            this.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "Nombre", Visible = true });
+          
+            this.Properties.ShowHeader = true;
+            this.Properties.ShowFooter = true;
+            this.Properties.NullText = "Seleccionar";
         }
 
         public void Bind()
         {
             Init();
-            this.Properties.DataSource = new OficinaLogic().GetAll().Where(x => x.CodigoOficina != CUtil.MiBase).ToList();
-            this.Properties.ValueMember = "CodigoOficina";
-            this.Properties.DisplayMember = "NombreOficina";
-        }        
 
+            var query = (from m in new BancoLogic().GetAll()
+                from n in new EntidadFinancieraLogic().GetAll().Where(x => x.EntidadId == m.EntidadId)
+                select new {m.BancoId, Nombre = n.CodEntidad + " - " + m.Direccion,});
+
+            this.Properties.DataSource = query;
+            this.Properties.ValueMember = "BancoId";
+            this.Properties.DisplayMember = "Nombre";
+        }
         protected override void OnEnter(EventArgs e)
         {
             base.OnEnter(e);

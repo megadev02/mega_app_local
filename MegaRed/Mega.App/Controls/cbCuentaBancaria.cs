@@ -6,47 +6,45 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using Mega.Bdo;
 using Mega.Logic;
 
 namespace Mega.App.Controls
 {
-    public partial class cbDocumento : DevExpress.XtraEditors.LookUpEdit
+    public partial class cbCuentaBancaria : DevExpress.XtraEditors.LookUpEdit
     {
-        public cbDocumento()
+         public cbCuentaBancaria()
         {
             InitializeComponent();
         }
 
-        public cbDocumento(IContainer container)
+         public cbCuentaBancaria(IContainer container)
         {
             container.Add(this);
 
             InitializeComponent();
         }
-       
-
-        protected override void OnPaint(PaintEventArgs pe)
-        {
-            base.OnPaint(pe);
-        }        
-
         void Init()
         {
             this.Properties.Columns.Clear();
-            this.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "CodDocumento", Visible = true });
-            this.Properties.ShowHeader = false;
-            this.Properties.ShowFooter = false;
-            this.Properties.NullText = "Seleccionar";            
+            this.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "NumeroCuentaBanco", Visible = true });
+            this.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "NombreCuentaBancaria", Visible = true });
+            
+          
+            this.       Properties.ShowHeader = true;
+           
+            this.Properties.ShowFooter = true;
+            this.Properties.NullText = "Seleccionar";
         }
 
-        public void Bind()
+        public void Bind(int entidadId)
         {
             Init();
-            this.Properties.DataSource = new DocumentoLogic().GetAll();
-            this.Properties.ValueMember = "CodDocumento";
-            this.Properties.DisplayMember = "CodDocumento";
-        }        
+            this.Properties.DataSource =
+                new CuentaBancariaLogic().GetAllBy(CuentaBancariaBdo.CuentaBancariaFields.EntidadId, entidadId);
+            this.Properties.ValueMember = "NumeroCuentaBanco";
+            this.Properties.DisplayMember = "NombreCuentaBancaria";
+        }
 
         protected override void OnEnter(EventArgs e)
         {

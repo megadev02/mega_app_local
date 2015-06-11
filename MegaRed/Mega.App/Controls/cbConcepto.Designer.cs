@@ -1,6 +1,6 @@
 ﻿namespace Mega.App.Controls
 {
-    partial class cbDocumento
+    partial class cbConcepto
     {
         /// <summary>
         /// Required designer variable.

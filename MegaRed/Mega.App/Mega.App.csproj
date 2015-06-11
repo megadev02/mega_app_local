@@ -124,11 +124,29 @@
     <Compile Include="Controls\cbTipoComunero.Designer.cs">
       <DependentUpon>cbTipoComunero.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\CodDocumento.cs">
+    <Compile Include="Controls\cbCodDocumento.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Controls\CodDocumento.Designer.cs">
-      <DependentUpon>CodDocumento.cs</DependentUpon>
+    <Compile Include="Controls\cbCodDocumento.Designer.cs">
+      <DependentUpon>cbCodDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cbBanco.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cbBanco.Designer.cs">
+      <DependentUpon>cbBanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cbCuentaBancaria.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cbCuentaBancaria.Designer.cs">
+      <DependentUpon>cbCuentaBancaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cbConcepto.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cbConcepto.Designer.cs">
+      <DependentUpon>cbConcepto.cs</DependentUpon>
     </Compile>
     <Compile Include="CUtil.cs" />
     <Compile Include="Messages.cs" />
@@ -144,6 +162,7 @@
     <Compile Include="Presenters\DenominacionMonedaPresenter.cs" />
     <Compile Include="Presenters\EntidadFinancieraPresenter.cs" />
     <Compile Include="Presenters\MonedaPresenter.cs" />
+    <Compile Include="Presenters\MovimientoFondosPresenter.cs" />
     <Compile Include="Presenters\OficinaPresenter.cs" />
     <Compile Include="Presenters\PersonaPresenter.cs" />
     <Compile Include="Presenters\SeriePresenter.cs" />
@@ -186,6 +205,12 @@
     </Compile>
     <Compile Include="Search\FormSearchMoneda.Designer.cs">
       <DependentUpon>FormSearchMoneda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\FormSearchMovFondos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\FormSearchMovFondos.Designer.cs">
+      <DependentUpon>FormSearchMovFondos.cs</DependentUpon>
     </Compile>
     <Compile Include="Search\FormSearchOficina.cs">
       <SubType>Form</SubType>
@@ -248,16 +273,17 @@
     <Compile Include="Views\EntidadFinancieraView.Designer.cs">
       <DependentUpon>EntidadFinancieraView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FondosView.cs">
+    <Compile Include="Views\MovimientoFondosView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\FondosView.Designer.cs">
-      <DependentUpon>FondosView.cs</DependentUpon>
+    <Compile Include="Views\MovimientoFondosView.Designer.cs">
+      <DependentUpon>MovimientoFondosView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Interface\IBancoView.cs" />
     <Compile Include="Views\Interface\IComprobanteView.cs" />
     <Compile Include="Views\Interface\IDenominacionMonedaView.cs" />
     <Compile Include="Views\Interface\IEntidadFinancieraView.cs" />
+    <Compile Include="Views\Interface\IMovimientoFondosView.cs" />
     <Compile Include="Views\Interface\ISerieView.cs" />
     <Compile Include="Views\Interface\ITransferenciaView.cs" />
     <Compile Include="Views\PersonaView.cs">
@@ -357,8 +383,8 @@
     <EmbeddedResource Include="Views\EntidadFinancieraView.resx">
       <DependentUpon>EntidadFinancieraView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FondosView.resx">
-      <DependentUpon>FondosView.cs</DependentUpon>
+    <EmbeddedResource Include="Views\MovimientoFondosView.resx">
+      <DependentUpon>MovimientoFondosView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PersonaView.resx">
       <DependentUpon>PersonaView.cs</DependentUpon>

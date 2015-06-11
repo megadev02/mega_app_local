@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -11,13 +11,20 @@ using Mega.Logic;
 
 namespace Mega.App.Controls
 {
-    public partial class cbOficina : DevExpress.XtraEditors.LookUpEdit
-    {        
-
-        public cbOficina()
+    public partial class cbCodDocumento : DevExpress.XtraEditors.LookUpEdit
+    {
+        public cbCodDocumento()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
+
+        public cbCodDocumento(IContainer container)
+        {
+            container.Add(this);
+
+            InitializeComponent();
+        }
+       
 
         protected override void OnPaint(PaintEventArgs pe)
         {
@@ -27,8 +34,7 @@ namespace Mega.App.Controls
         void Init()
         {
             this.Properties.Columns.Clear();
-            this.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "CodigoOficina", Visible = false });
-            this.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "NombreOficina", Visible = true });            
+            this.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "CodDocumento", Visible = true });
             this.Properties.ShowHeader = false;
             this.Properties.ShowFooter = false;
             this.Properties.NullText = "Seleccionar";            
@@ -37,9 +43,9 @@ namespace Mega.App.Controls
         public void Bind()
         {
             Init();
-            this.Properties.DataSource = new OficinaLogic().GetAll().Where(x => x.CodigoOficina != CUtil.MiBase).ToList();
-            this.Properties.ValueMember = "CodigoOficina";
-            this.Properties.DisplayMember = "NombreOficina";
+            this.Properties.DataSource = new DocumentoLogic().GetAll();
+            this.Properties.ValueMember = "CodDocumento";
+            this.Properties.DisplayMember = "CodDocumento";
         }        
 
         protected override void OnEnter(EventArgs e)
