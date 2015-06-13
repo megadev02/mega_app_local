@@ -9,9 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bijcorp.Base;
+using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Controls;
 using Mega.App.Presenters;
 using Mega.App.Views.Interface;
 using Mega.Bdo;
+using Mega.Comun;
 using Mega.Logic;
 
 namespace Mega.App.Views
@@ -19,9 +22,7 @@ namespace Mega.App.Views
     public partial class MovimientoFondosView : FormBase, IMovimientoFondosView
     {
         private MovimientoFondosPresenter _movimientoFondosPresenter;
-        private const string STR_RECIBO_INGRESO = "RI";
-        private const string STR_RECIBO_EGRESO = "RE";
-
+        
         public enum TypeViewFondos
         {
             Ingreso,
@@ -56,23 +57,37 @@ namespace Mega.App.Views
             set { tbImporte.EditValue = value; }
         }
         public string OficinaIdProcedencia {
-            get { return cbOfProcedencia.EditValue.ToString(); }
+            get
+            {
+                if (_typeViewFondos == TypeViewFondos.Egreso)
+                {
+                    return CUtil.MiBase;
+                }
+                return cbOfProcedencia.EditValue.ToString();
+            }
             set { cbOfProcedencia.EditValue = value; }
         }
         public string OficinaIdDestino {
-            get { return cbOfDestino.EditValue.ToString(); }
+            get
+            {
+                if (_typeViewFondos == TypeViewFondos.Ingreso)
+                {
+                    return CUtil.MiBase;
+                }                
+                return cbOfDestino.EditValue.ToString();
+            }
             set { cbOfDestino.EditValue = value; }
         }
         public string CodigoPersona {
-            get { return tbCodigoPersona.ItemId.ToString(); }
+            get { return tbCodigoPersona.ItemId == null ? null : Convert.ToString(tbCodigoPersona.ItemId); } 
             set { tbCodigoPersona.ItemId = value; }
         }
         public int? BancoId {
-            get { return Convert.ToInt32(cbBanco1.EditValue); }
+            get { return cbBanco1.EditValue == null ? Utilities.NullInt32 : Convert.ToInt32(cbBanco1.EditValue); }
             set { cbBanco1.EditValue = value; }
         }
         public int? NumeroCuentaBanco {
-            get { return Convert.ToInt32(cbCuentaBancaria1.EditValue); }
+            get { return cbCuentaBancaria1.EditValue == null ? Utilities.NullInt32 : Convert.ToInt32(cbCuentaBancaria1.EditValue); }
             set { cbCuentaBancaria1.EditValue = value; }
         }
         public string CodigoVoucher {
@@ -115,33 +130,58 @@ namespace Mega.App.Views
             cbOfProcedencia.Bind();
             cbOfDestino.Bind();
             cbBanco1.Bind();
-            cbMoneda1.Bind();
-            cbDocumento1.Bind();
-            tbCodigoPersona.Bind(new PersonaLogic().GetSearchPersona(), SearchButtonEdit.DisplayMember.FieldName);
+            cbMoneda1.Bind();            
+            tbCodigoPersona.Bind(new PersonaLogic().GetSearchPersona(), SearchButtonEdit.DisplayMember.FieldName);            
 
             if (_typeViewFondos == TypeViewFondos.Ingreso)
             {
                 paProcedencia.Visible = true;
                 paDestino.Visible = false;
                 Text = @"Ingreso de fondos";
-                cbDocumento1.EditValue = STR_RECIBO_INGRESO;
+                cbDocumento1.Bind(Constantes.MODULE_INGRESO_FONDOS);                              
             }
             else
             {
                 paProcedencia.Visible = false;
                 paDestino.Visible = true;
                 Text = @"Egreso de fondos";
-                cbDocumento1.EditValue = STR_RECIBO_EGRESO;
+                cbDocumento1.Bind(Constantes.MODULE_EGRESO_FONDOS);
             }
-
-            cbDocumento1.Enabled = false;
+            
+            cbMoneda1.ItemIndex = 0;
         }
 
         private void cbDocumento1_EditValueChanged(object sender, EventArgs e)
         {
-            _movimientoFondosPresenter.SetNumeroDocumento(_typeViewFondos == TypeViewFondos.Ingreso
-                ? STR_RECIBO_INGRESO
-                : STR_RECIBO_EGRESO);
+            if (cbDocumento1.EditValue != null)
+                _movimientoFondosPresenter.SetNumeroDocumento(cbDocumento1.EditValue.ToString());
+        }
+
+        private void cbCuentaBancaria1_Properties_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            if (e.Button.Kind == ButtonPredefines.Ellipsis)
+            {
+                MessageBox.Show("cuenta bancaria");
+            }
+        }
+
+        private void repMostrar_ButtonClick(object sender, ButtonPressedEventArgs e)
+        {
+            var reciboCajaBdo = gvRecibos.GetRow(gvRecibos.FocusedRowHandle) as ReciboCajaBdo;
+
+            if (reciboCajaBdo == null) return;
+
+            _movimientoFondosPresenter.MostrarReciboCajaSeleccionado(reciboCajaBdo);
+        }
+
+        private void gcRecibos_EmbeddedNavigator_ButtonClick(object sender, DevExpress.XtraEditors.NavigatorButtonClickEventArgs e)
+        {
+            if (e.Button.ButtonType == NavigatorButtonType.Append)
+            {
+                _movimientoFondosPresenter.AddReciboCaja();
+
+                e.Handled = true;
+            }
         }
     }
 }

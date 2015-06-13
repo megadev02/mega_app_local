@@ -30,8 +30,8 @@ namespace Mega.App.Controls
             this.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "BancoId", Visible = false });            
             this.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "Nombre", Visible = true });
           
-            this.Properties.ShowHeader = true;
-            this.Properties.ShowFooter = true;
+            this.Properties.ShowHeader = false;
+            this.Properties.ShowFooter = false;
             this.Properties.NullText = "Seleccionar";
         }
 
@@ -41,7 +41,7 @@ namespace Mega.App.Controls
 
             var query = (from m in new BancoLogic().GetAll()
                 from n in new EntidadFinancieraLogic().GetAll().Where(x => x.EntidadId == m.EntidadId)
-                select new {m.BancoId, Nombre = n.CodEntidad + " - " + m.Direccion,});
+                select new {m.BancoId, Nombre = n.CodEntidad + " - " + m.Direccion,}).ToList();
 
             this.Properties.DataSource = query;
             this.Properties.ValueMember = "BancoId";

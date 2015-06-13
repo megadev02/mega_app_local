@@ -273,6 +273,7 @@
     <Compile Include="Views\EntidadFinancieraView.Designer.cs">
       <DependentUpon>EntidadFinancieraView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Interface\IReciboCajaView.cs" />
     <Compile Include="Views\MovimientoFondosView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -419,7 +420,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Desert.jpg" />

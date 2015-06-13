@@ -107,46 +107,46 @@ namespace Mega.App.Presenters
 
         protected override void Update()
         {
-            _transferenciaBdo.NumeroDocumento = _transferenciaView.NumeroDocumento;
-            _transferenciaBdo.CodDocumento = _transferenciaView.CodDocumento;
-            _transferenciaBdo.OficinaIdProcedencia = _transferenciaView.OficinaIdProcedencia;
-            _transferenciaBdo.OficinaIdDestino = _transferenciaView.OficinaIdDestino;
-            _transferenciaBdo.PersonaIdSolicitante = _transferenciaView.PersonaIdSolicitante;
-            _transferenciaBdo.PersonaIdBeneficiario = _transferenciaView.PersonaIdBeneficiario;
-            _transferenciaBdo.FechaHoraTransferencia = _transferenciaView.FechaHoraTransferencia;
-            _transferenciaBdo.MonedaId = _transferenciaView.MonedaId;
-            _transferenciaBdo.Importe = _transferenciaView.Importe;
-            _transferenciaBdo.DerechoTransferencia = _transferenciaView.DerechoTransferencia;
-            _transferenciaBdo.DerechoTransferenciaArreglo = _transferenciaView.DerechoTransferenciaArreglo;
-            _transferenciaBdo.ObsTransferencia = _transferenciaView.ObsTransferencia;
-            _transferenciaBdo.FechaHoraAnulacion = _transferenciaView.FechaHoraAnulacion;
-            _transferenciaBdo.UsuarioAnulacion = _transferenciaView.UsuarioAnulacion;
-            _transferenciaBdo.BancoId = _transferenciaView.BancoId;
-            _transferenciaBdo.NumeroCuentaBanco = _transferenciaView.NumeroCuentaBanco;
-            _transferenciaBdo.ComisionBancaria = _transferenciaView.ComisionBancaria;
-            _transferenciaBdo.TipoOperacionBancaria = _transferenciaView.TipoOperacionBancaria;
-            _transferenciaBdo.CodigoOperacion = _transferenciaView.CodigoOperacion;
-            _transferenciaBdo.EstadoOperacionBancaria = _transferenciaView.EstadoOperacionBancaria;
-            _transferenciaBdo.MotivoAnulacion = _transferenciaView.MotivoAnulacion;
-            _transferenciaBdo.FechaHoraPago = _transferenciaView.FechaHoraPago;
-            _transferenciaBdo.CodDocumentoPago = _transferenciaView.CodDocumentoPago;
-            _transferenciaBdo.NroDocumentoPago = _transferenciaView.NroDocumentoPago;
-            _transferenciaBdo.ObsPagoTransferencia = _transferenciaView.ObsPagoTransferencia;
-            _transferenciaBdo.Estado = _transferenciaView.Estado;
-            _transferenciaBdo.FlagImpreso = _transferenciaView.FlagImpreso;
-            _transferenciaBdo.CajaAperturaId = _transferenciaView.CajaAperturaId;
-            _transferenciaBdo.TipoTransaccion = _transferenciaView.TipoTransaccion;
-            _transferenciaBdo.ConceptoId = _transferenciaView.ConceptoId;
-            _transferenciaBdo.CodigoSeguridad = _transferenciaView.CodigoSeguridad;
-            _transferenciaBdo.FlagArregloCuenta = _transferenciaView.FlagArregloCuenta;
-            _transferenciaBdo.FlagChequeo = _transferenciaView.FlagChequeo;
-            _transferenciaBdo.FechaHoraChequeo = _transferenciaView.FechaHoraChequeo;
-            _transferenciaBdo.UsuarioChequeo = _transferenciaView.UsuarioChequeo;            		
-            _transferenciaBdo.UsuarioArregloCuenta = _transferenciaView.UsuarioArregloCuenta;
+            //_transferenciaBdo.NumeroDocumento = _transferenciaView.NumeroDocumento;
+            //_transferenciaBdo.CodDocumento = _transferenciaView.CodDocumento;
+            //_transferenciaBdo.OficinaIdProcedencia = _transferenciaView.OficinaIdProcedencia;
+            //_transferenciaBdo.OficinaIdDestino = _transferenciaView.OficinaIdDestino;
+            //_transferenciaBdo.PersonaIdSolicitante = _transferenciaView.PersonaIdSolicitante;
+            //_transferenciaBdo.PersonaIdBeneficiario = _transferenciaView.PersonaIdBeneficiario;
+            //_transferenciaBdo.FechaHoraTransferencia = _transferenciaView.FechaHoraTransferencia;
+            //_transferenciaBdo.MonedaId = _transferenciaView.MonedaId;
+            //_transferenciaBdo.Importe = _transferenciaView.Importe;
+            //_transferenciaBdo.DerechoTransferencia = _transferenciaView.DerechoTransferencia;
+            //_transferenciaBdo.DerechoTransferenciaArreglo = _transferenciaView.DerechoTransferenciaArreglo;
+            //_transferenciaBdo.ObsTransferencia = _transferenciaView.ObsTransferencia;
+            //_transferenciaBdo.FechaHoraAnulacion = _transferenciaView.FechaHoraAnulacion;
+            //_transferenciaBdo.UsuarioAnulacion = _transferenciaView.UsuarioAnulacion;
+            //_transferenciaBdo.BancoId = _transferenciaView.BancoId;
+            //_transferenciaBdo.NumeroCuentaBanco = _transferenciaView.NumeroCuentaBanco;
+            //_transferenciaBdo.ComisionBancaria = _transferenciaView.ComisionBancaria;
+            //_transferenciaBdo.TipoOperacionBancaria = _transferenciaView.TipoOperacionBancaria;
+            //_transferenciaBdo.CodigoOperacion = _transferenciaView.CodigoOperacion;
+            //_transferenciaBdo.EstadoOperacionBancaria = _transferenciaView.EstadoOperacionBancaria;
+            //_transferenciaBdo.MotivoAnulacion = _transferenciaView.MotivoAnulacion;
+            //_transferenciaBdo.FechaHoraPago = _transferenciaView.FechaHoraPago;
+            //_transferenciaBdo.CodDocumentoPago = _transferenciaView.CodDocumentoPago;
+            //_transferenciaBdo.NroDocumentoPago = _transferenciaView.NroDocumentoPago;
+            //_transferenciaBdo.ObsPagoTransferencia = _transferenciaView.ObsPagoTransferencia;
+            //_transferenciaBdo.Estado = _transferenciaView.Estado;
+            //_transferenciaBdo.FlagImpreso = _transferenciaView.FlagImpreso;
+            //_transferenciaBdo.CajaAperturaId = _transferenciaView.CajaAperturaId;
+            //_transferenciaBdo.TipoTransaccion = _transferenciaView.TipoTransaccion;
+            //_transferenciaBdo.ConceptoId = _transferenciaView.ConceptoId;
+            //_transferenciaBdo.CodigoSeguridad = _transferenciaView.CodigoSeguridad;
+            //_transferenciaBdo.FlagArregloCuenta = _transferenciaView.FlagArregloCuenta;
+            //_transferenciaBdo.FlagChequeo = _transferenciaView.FlagChequeo;
+            //_transferenciaBdo.FechaHoraChequeo = _transferenciaView.FechaHoraChequeo;
+            //_transferenciaBdo.UsuarioChequeo = _transferenciaView.UsuarioChequeo;            		
+            //_transferenciaBdo.UsuarioArregloCuenta = _transferenciaView.UsuarioArregloCuenta;
 
-            _transferenciaLogic.Update(ref _transferenciaBdo, ref _message);
+            //_transferenciaLogic.Update(ref _transferenciaBdo, ref _message);
 
-            MessageBox.Show(_message);
+            //MessageBox.Show(_message);
         }
 
         protected override bool AllRightAdd()

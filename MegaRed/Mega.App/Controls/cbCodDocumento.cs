@@ -46,7 +46,22 @@ namespace Mega.App.Controls
             this.Properties.DataSource = new DocumentoLogic().GetAll();
             this.Properties.ValueMember = "CodDocumento";
             this.Properties.DisplayMember = "CodDocumento";
-        }        
+        }
+
+        public void Bind(string moduleName)
+        {
+            Init();
+            var query = new ConfiguracionLogic().GetListCodDocumentByModule(moduleName);
+            this.Properties.DataSource = query;
+            this.Properties.ValueMember = "CodDocumento";
+            this.Properties.DisplayMember = "CodDocumento";
+
+            if (query == null) return;
+
+            Enabled = query.Count != 1;
+
+            ItemIndex = 0;
+        }
 
         protected override void OnEnter(EventArgs e)
         {

@@ -57,10 +57,13 @@
             this.paProcedencia = new DevExpress.XtraEditors.PanelControl();
             this.gcRecibos = new DevExpress.XtraGrid.GridControl();
             this.gvRecibos = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repMostrar = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tbObservacion = new DevExpress.XtraEditors.MemoEdit();
             this.label5 = new System.Windows.Forms.Label();
             this.cbDocumento1 = new Mega.App.Controls.cbCodDocumento(this.components);
@@ -90,6 +93,7 @@
             this.paProcedencia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcRecibos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvRecibos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repMostrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbObservacion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbDocumento1.Properties)).BeginInit();
             this.SuspendLayout();
@@ -190,7 +194,9 @@
             this.cbCuentaBancaria1.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.cbCuentaBancaria1.Properties.Appearance.Options.UseBackColor = true;
             this.cbCuentaBancaria1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, true, true, DevExpress.Utils.HorzAlignment.Center, null)});
+            this.cbCuentaBancaria1.Properties.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.cbCuentaBancaria1_Properties_ButtonClick);
             this.cbCuentaBancaria1.Size = new System.Drawing.Size(186, 20);
             this.cbCuentaBancaria1.TabIndex = 29;
             // 
@@ -394,55 +400,107 @@
             // 
             // 
             // 
+            this.gcRecibos.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
+            this.gcRecibos.EmbeddedNavigator.Buttons.Edit.Visible = false;
+            this.gcRecibos.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
+            this.gcRecibos.EmbeddedNavigator.Buttons.First.Visible = false;
+            this.gcRecibos.EmbeddedNavigator.Buttons.Last.Visible = false;
+            this.gcRecibos.EmbeddedNavigator.Buttons.Next.Visible = false;
+            this.gcRecibos.EmbeddedNavigator.Buttons.NextPage.Visible = false;
+            this.gcRecibos.EmbeddedNavigator.Buttons.Prev.Visible = false;
+            this.gcRecibos.EmbeddedNavigator.Buttons.PrevPage.Visible = false;
+            this.gcRecibos.EmbeddedNavigator.Buttons.Remove.Visible = false;
             this.gcRecibos.EmbeddedNavigator.Name = "";
+            this.gcRecibos.EmbeddedNavigator.ButtonClick += new DevExpress.XtraEditors.NavigatorButtonClickEventHandler(this.gcRecibos_EmbeddedNavigator_ButtonClick);
             this.gcRecibos.Location = new System.Drawing.Point(13, 233);
             this.gcRecibos.MainView = this.gvRecibos;
             this.gcRecibos.Name = "gcRecibos";
+            this.gcRecibos.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repMostrar});
             this.gcRecibos.Size = new System.Drawing.Size(611, 172);
             this.gcRecibos.TabIndex = 70;
+            this.gcRecibos.UseEmbeddedNavigator = true;
             this.gcRecibos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvRecibos});
             // 
             // gvRecibos
             // 
             this.gvRecibos.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn6,
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3,
-            this.gridColumn4});
+            this.gridColumn4,
+            this.gridColumn5});
             this.gvRecibos.GridControl = this.gcRecibos;
             this.gvRecibos.Name = "gvRecibos";
+            this.gvRecibos.OptionsDetail.EnableMasterViewMode = false;
+            this.gvRecibos.OptionsDetail.ShowDetailTabs = false;
             this.gvRecibos.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "#";
+            this.gridColumn6.ColumnEdit = this.repMostrar;
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 0;
+            this.gridColumn6.Width = 55;
+            // 
+            // repMostrar
+            // 
+            this.repMostrar.AutoHeight = false;
+            this.repMostrar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Mostrar", -1, true, true, false, DevExpress.Utils.HorzAlignment.Center, null)});
+            this.repMostrar.Name = "repMostrar";
+            this.repMostrar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.repMostrar.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repMostrar_ButtonClick);
             // 
             // gridColumn1
             // 
-            this.gridColumn1.Caption = "Documento";
-            this.gridColumn1.FieldName = "Documento";
+            this.gridColumn1.Caption = "ReciboCajaId";
+            this.gridColumn1.FieldName = "ReciboCajaId";
             this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
             // 
             // gridColumn2
             // 
-            this.gridColumn2.Caption = "Concepto";
-            this.gridColumn2.FieldName = "Concepto";
+            this.gridColumn2.Caption = "Cod. Doc";
+            this.gridColumn2.FieldName = "CodDocumento";
             this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 132;
             // 
             // gridColumn3
             // 
-            this.gridColumn3.Caption = "Cuenta";
+            this.gridColumn3.Caption = "N°Doc";
+            this.gridColumn3.FieldName = "NumeroDocumento";
             this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.Width = 132;
             // 
             // gridColumn4
             // 
-            this.gridColumn4.Caption = "Importe";
+            this.gridColumn4.Caption = "Concepto";
+            this.gridColumn4.FieldName = "Concepto";
             this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.Width = 132;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Importe";
+            this.gridColumn5.FieldName = "Importe";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.OptionsColumn.AllowEdit = false;
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.Width = 139;
             // 
             // tbObservacion
             // 
@@ -511,6 +569,7 @@
             this.paProcedencia.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcRecibos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvRecibos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repMostrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbObservacion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbDocumento1.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -543,17 +602,20 @@
         private Controls.cbBanco cbBanco1;
         private Controls.cbCuentaBancaria cbCuentaBancaria1;
         private DevExpress.XtraGrid.GridControl gcRecibos;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvRecibos;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.PanelControl paDestino;
         private DevExpress.XtraEditors.PanelControl paProcedencia;
+        private DevExpress.XtraEditors.MemoEdit tbObservacion;
+        private System.Windows.Forms.Label label5;
+        private Controls.cbCodDocumento cbDocumento1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvRecibos;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repMostrar;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraEditors.MemoEdit tbObservacion;
-        private System.Windows.Forms.Label label5;
-        private Controls.cbCodDocumento cbDocumento1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
 
 
 

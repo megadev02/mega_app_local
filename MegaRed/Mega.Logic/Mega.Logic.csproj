@@ -36,6 +36,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfiguracionLogic.cs" />
     <Compile Include="ParPersonaLogic.cs" />
     <Compile Include="EntidadFinancieraLogic.cs" />
     <Compile Include="InvalidLogicObjectException.cs" />
@@ -77,6 +78,10 @@
     <ProjectReference Include="..\Mega.Bdo\Mega.Bdo.csproj">
       <Project>{c6fd9f84-a18e-472d-ba4b-7ed274f5b276}</Project>
       <Name>Mega.Bdo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mega.Comun\Mega.Comun.csproj">
+      <Project>{5ce827ec-75c9-40d5-8167-9648bdf9cc02}</Project>
+      <Name>Mega.Comun</Name>
     </ProjectReference>
     <ProjectReference Include="..\Mega.Dao\Mega.Dao.csproj">
       <Project>{152f1b5a-2941-424a-8e65-88a5efa0ace0}</Project>

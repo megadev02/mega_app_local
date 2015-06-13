@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Mega.Comun
 {
     public class Types
-    {
+    {        
         public enum TipoOficina
         {
             Propio = 1,
